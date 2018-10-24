@@ -2,8 +2,8 @@ disabled_rules:
   - trailing_whitespace
 excluded:
   - Carthage
-  - BaseProjectTests
-  - BaseProjectUITests
+  - ProjectTests
+  - ProjectUITests
 line_length: 120
 function_body_length: 20
 identifier_name:
