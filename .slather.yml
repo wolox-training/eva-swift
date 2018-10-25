@@ -1,0 +1,8 @@
+xcodeproj: ./Project.xcodeproj
+scheme: Project
+ignore:
+  - Project/AppDelegate.swift
+  - Project/Environment.swift
+  - Project/Services/RollbarService.swift
+  - ProjectTests/*
+  - ProjectUITests/*
