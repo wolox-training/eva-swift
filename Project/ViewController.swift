@@ -8,19 +8,58 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ViewController:  UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
+        self.delegate = self
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        let frame = CGRect(x: 0, y: view.frame.size.height / 2 - 11, width: view.frame.size.width, height: 22)
-        let label = UILabel(frame: frame)
-        label.text = "Welcome! This is a new blank project"
-        label.textAlignment = .center
-        label.sizeToFit()
-        view.addSubview(label)
+        // Create Library
+        let libraryTab = LibraryViewController()
+        let libraryTabBarItem =  UITabBarItem(tabBarSystemItem: .bookmarks, tag: 7)
+        
+        libraryTab.tabBarItem = libraryTabBarItem
+        
+        
+        
+        // Create WishList
+        let wishlistTab = WishListViewController()
+        let wishlistTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        wishlistTab.tabBarItem = wishlistTabBarItem
+        
+        // Create AddBook
+        let addBookTab = AddBookViewController()
+        let addBookTabBarItem = UITabBarItem(tabBarSystemItem: .mostRecent, tag: 10)
+        
+        addBookTab.tabBarItem = addBookTabBarItem
+        
+        // Create Rentals
+        let rentalsTab = RentalsViewController()
+        let rentalsTabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 6)
+        
+        rentalsTab.tabBarItem = rentalsTabBarItem
+        
+        
+        // Create Settings
+        let settingsTab = SettingsViewController()
+        let settingsTabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 11)
+        
+        settingsTab.tabBarItem = settingsTabBarItem
+        
+        
+        self.viewControllers = [libraryTab, wishlistTab,addBookTab,rentalsTab,settingsTab]
+    }
+    
+    // UITabBarControllerDelegate method
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("Selected \(viewController.title!)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,3 +68,7 @@ final class ViewController: UIViewController {
     }
 
 }
+
+
+
+
