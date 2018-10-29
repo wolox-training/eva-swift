@@ -13,7 +13,7 @@ class RentalsViewController: UIViewController {
         super.viewDidLoad()
         // Setting color.
         self.view.backgroundColor = UIColor.orange
-        self.title = "WishList View"
+        self.title = "Rentals"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

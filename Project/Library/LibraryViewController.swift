@@ -12,8 +12,7 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.gray
-        self.title = "Library View"
+        self.title = "Library"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

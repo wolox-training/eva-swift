@@ -12,6 +12,7 @@ class Book : BaseModel {
     override init() {
         
     }
+    var id : Int?
     var title : String = ""
     var description : String = ""
     var authors : [Author]?

@@ -13,7 +13,7 @@ class AddBookViewController: UIViewController {
         super.viewDidLoad()
         // Setting color.
         self.view.backgroundColor = UIColor.cyan
-        self.title = "WishList View"
+        self.title = "AddBook"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

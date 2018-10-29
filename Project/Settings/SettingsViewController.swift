@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         // Setting color.
         self.view.backgroundColor = UIColor.black
-        self.title = "WishList View"
+        self.title = "Settings"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

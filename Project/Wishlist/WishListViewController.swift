@@ -12,8 +12,7 @@ class WishListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setting color.
-        self.view.backgroundColor = UIColor.darkGray
-        self.title = "WishList View"
+        self.title = "WishList"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

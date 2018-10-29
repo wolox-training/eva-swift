@@ -9,7 +9,7 @@
 import Foundation
 
 class Author : BaseModel {
-    
+    var id : Int?
     var fullName : String =  ""
     var bio : String = ""
     
