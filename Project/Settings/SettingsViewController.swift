@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
         self.title = "Settings"
     }
     func setup() -> Void {
-        self.tabBarItem UITabBarItem(title: "Settings", image: UIImage(named: "ic_settings.png"), selectedImage: UIImage(named: "ic_settings.png"))
+        self.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "ic_settings.png"), selectedImage: UIImage(named: "ic_settings.png"))
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
