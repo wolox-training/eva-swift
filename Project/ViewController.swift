@@ -22,35 +22,19 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate {
         
         // Create Library
         let libraryTab = LibraryViewController()
-        let libraryTabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
-        
-        libraryTab.tabBarItem = libraryTabBarItem
+        libraryTab.setup()
         // Create WishList
         let wishlistTab = WishListViewController()
-        let wishlistTabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist.png"), selectedImage: UIImage(named: "ic_wishlist.png"))
-        
-        wishlistTab.tabBarItem = wishlistTabBarItem
-        
+        wishlistTab.setup()
         // Create AddBook
         let addBookTab = AddBookViewController()
-        let addBookTabBarItem = UITabBarItem(title: "Add Book", image: UIImage(named: "ic_add new.png"), selectedImage: UIImage(named: "ic_add new.png"))
-        
-        addBookTab.tabBarItem = addBookTabBarItem
-        
+        addBookTab.setup()
         // Create Rentals
         let rentalsTab = RentalsViewController()
-        let rentalsTabBarItem = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals.png"), selectedImage: UIImage(named: "ic_myrentals.png"))
-        
-        rentalsTab.tabBarItem = rentalsTabBarItem
-        
-        
+        rentalsTab.setup()
         // Create Settings
         let settingsTab = SettingsViewController()
-        let settingsTabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "ic_settings.png"), selectedImage: UIImage(named: "ic_settings.png"))
-        
-        settingsTab.tabBarItem = settingsTabBarItem
-        
-        
+        settingsTab.setup()
         self.viewControllers = [libraryTab, wishlistTab,addBookTab,rentalsTab,settingsTab]
     }
     

@@ -14,6 +14,9 @@ class LibraryViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "Library"
     }
+    func setup() -> Void {
+        self.tabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

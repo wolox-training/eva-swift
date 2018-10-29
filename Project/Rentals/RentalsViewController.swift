@@ -15,6 +15,9 @@ class RentalsViewController: UIViewController {
         self.view.backgroundColor = UIColor.orange
         self.title = "Rentals"
     }
+    func setup() -> Void {
+        self.tabBarItem = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals.png"), selectedImage: UIImage(named: "ic_myrentals.png"))
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

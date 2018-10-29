@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 class WishListViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setting color.
         self.title = "WishList"
+    }
+    func setup() -> Void {
+        self.tabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named: "ic_wishlist"))
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

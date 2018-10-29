@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 410C80CC2187B8D9009BD6BB /* Localizables.strings */; };
 		41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164721875C380010B3C2 /* LibraryViewController.swift */; };
 		41D5164A21875C5A0010B3C2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164921875C5A0010B3C2 /* Book.swift */; };
 		41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164B21875C750010B3C2 /* BaseModel.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		410C80CC2187B8D9009BD6BB /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
 		41D5164721875C380010B3C2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		41D5164921875C5A0010B3C2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		41D5164B21875C750010B3C2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				9D1575061CB1B27500EA395E /* ViewController.swift */,
+				410C80CC2187B8D9009BD6BB /* Localizables.strings */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -395,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
