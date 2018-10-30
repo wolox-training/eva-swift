@@ -12,15 +12,15 @@ class WishListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Setting color.
-        self.title = "WishList"
-    }
-    func setup() -> Void {
-        self.tabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named: "ic_wishlist"))
+        title = "WishList"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    convenience init() {
+        self.init(nibName:nil, bundle:nil)
+        tabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named: "ic_wishlist"))
     }
     
 }

@@ -12,15 +12,20 @@ class RentalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Setting color.
-        self.view.backgroundColor = UIColor.orange
-        self.title = "Rentals"
+        view.backgroundColor = UIColor.orange
+        title = "Rentals"
     }
-    func setup() -> Void {
-        self.tabBarItem = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals.png"), selectedImage: UIImage(named: "ic_myrentals.png"))
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    convenience init() {
+        self.init(nibName:nil, bundle:nil)
+        //tabbar name and style setup
+        tabBarItem = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals.png"), selectedImage: UIImage(named: "ic_myrentals.png"))
+    }
+    
     
 }

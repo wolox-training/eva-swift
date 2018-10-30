@@ -13,35 +13,27 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.delegate = self
-        self.view.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1.0)
+        delegate = self
+        view.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1.0)
         // navigation bar
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create Library
-        let libraryTab = LibraryViewController()
-        libraryTab.setup()
-        // Create WishList
-        let wishlistTab = WishListViewController()
-        wishlistTab.setup()
-        // Create AddBook
-        let addBookTab = AddBookViewController()
-        addBookTab.setup()
-        // Create Rentals
-        let rentalsTab = RentalsViewController()
-        rentalsTab.setup()
-        // Create Settings
-        let settingsTab = SettingsViewController()
-        settingsTab.setup()
-        self.viewControllers = [libraryTab, wishlistTab,addBookTab,rentalsTab,settingsTab]
+        //setup of all controllers
+        viewControllers = [
+            LibraryViewController(),
+            WishListViewController(),
+            AddBookViewController(),
+            RentalsViewController(),
+            SettingsViewController()]
     }
     
     // UITabBarControllerDelegate method
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected \(viewController.title!)")
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
