@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 410C80CC2187B8D9009BD6BB /* Localizables.strings */; };
+		41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164721875C380010B3C2 /* LibraryViewController.swift */; };
+		41D5164A21875C5A0010B3C2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164921875C5A0010B3C2 /* Book.swift */; };
+		41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164B21875C750010B3C2 /* BaseModel.swift */; };
+		41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165021875CFB0010B3C2 /* WishListViewController.swift */; };
+		41D5165321875E570010B3C2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165221875E570010B3C2 /* Author.swift */; };
+		41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D51658218762E10010B3C2 /* AddBookViewController.swift */; };
+		41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165A218763000010B3C2 /* RentalsViewController.swift */; };
+		41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165C218763270010B3C2 /* SettingsViewController.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -60,6 +69,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		410C80CC2187B8D9009BD6BB /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
+		41D5164721875C380010B3C2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		41D5164921875C5A0010B3C2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		41D5164B21875C750010B3C2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		41D5165021875CFB0010B3C2 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		41D5165221875E570010B3C2 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		41D51658218762E10010B3C2 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		41D5165A218763000010B3C2 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
+		41D5165C218763270010B3C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +141,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41D5164521875BFC0010B3C2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				41D5164721875C380010B3C2 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		41D5164621875C080010B3C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41D5164921875C5A0010B3C2 /* Book.swift */,
+				41D5164B21875C750010B3C2 /* BaseModel.swift */,
+				41D5165221875E570010B3C2 /* Author.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		41D5164D21875CBB0010B3C2 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				41D5165021875CFB0010B3C2 /* WishListViewController.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		41D51655218760D00010B3C2 /* AddBook */ = {
+			isa = PBXGroup;
+			children = (
+				41D51658218762E10010B3C2 /* AddBookViewController.swift */,
+			);
+			path = AddBook;
+			sourceTree = "<group>";
+		};
+		41D51656218760E30010B3C2 /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				41D5165A218763000010B3C2 /* RentalsViewController.swift */,
+			);
+			path = Rentals;
+			sourceTree = "<group>";
+		};
+		41D51657218760EA0010B3C2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				41D5165C218763270010B3C2 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +215,17 @@
 		9D1575031CB1B27500EA395E /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				41D51657218760EA0010B3C2 /* Settings */,
+				41D51656218760E30010B3C2 /* Rentals */,
+				41D51655218760D00010B3C2 /* AddBook */,
+				41D5164D21875CBB0010B3C2 /* Wishlist */,
+				41D5164621875C080010B3C2 /* Models */,
+				41D5164521875BFC0010B3C2 /* Library */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				9D1575061CB1B27500EA395E /* ViewController.swift */,
+				410C80CC2187B8D9009BD6BB /* Localizables.strings */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -323,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -387,9 +463,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
+				41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */,
+				41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */,
+				41D5165321875E570010B3C2 /* Author.swift in Sources */,
+				41D5164A21875C5A0010B3C2 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */,
+				41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,7 +680,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-alpha";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -701,7 +785,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -804,7 +888,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-production";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (

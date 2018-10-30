@@ -8,20 +8,32 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ViewController:  UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
-        
-        let frame = CGRect(x: 0, y: view.frame.size.height / 2 - 11, width: view.frame.size.width, height: 22)
-        let label = UILabel(frame: frame)
-        label.text = "Welcome! This is a new blank project"
-        label.textAlignment = .center
-        label.sizeToFit()
-        view.addSubview(label)
+        delegate = self
+        view.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1.0)
+        // navigation bar
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //setup of all controllers
+        viewControllers = [
+            LibraryViewController(),
+            WishListViewController(),
+            AddBookViewController(),
+            RentalsViewController(),
+            SettingsViewController()]
+    }
+    
+    // UITabBarControllerDelegate method
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("Selected \(viewController.title!)")
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,3 +41,7 @@ final class ViewController: UIViewController {
     }
 
 }
+
+
+
+
