@@ -23,6 +23,7 @@ class LibraryViewController: UIViewController {
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
+        
         tabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
     }
     

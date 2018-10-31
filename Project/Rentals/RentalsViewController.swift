@@ -11,8 +11,6 @@ import UIKit
 class RentalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Setting color.
-        view.backgroundColor = UIColor.orange
         title = "Rentals"
     }
     
