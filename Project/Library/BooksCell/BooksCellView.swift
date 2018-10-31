@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+import Core
+class BooksCellView: UIView, NibLoadable {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var bookImage: UIImageView!
+    
+}

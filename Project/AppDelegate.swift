@@ -26,9 +26,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RollbarService().initialize()
          *
          */
-        
+        let root = ViewController()
+        let navigationController = UINavigationController(rootViewController: root)
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.tintColor = UIColor.white
+        // background color
+        navigationController.navigationBar.barTintColor = UIColor(hex: "#00a5f2")
+        //remove shadow from navbar
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

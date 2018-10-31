@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import Core
+class BooksTableView: UIView, NibLoadable {
+    
+}
