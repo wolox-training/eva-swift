@@ -11,4 +11,5 @@ import UIKit
 import Core
 class BooksTableView: UIView, NibLoadable {
     
+    @IBOutlet weak var booksTable: UITableView!
 }

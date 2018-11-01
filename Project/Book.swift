@@ -9,12 +9,15 @@
 import Foundation
 class Book : BaseModel {
     
-    override init() {
-        
+    init(_ id: Int,_ title: String , _ img:String) {
+        self.id = id
+        self.title = title
+        self.img = img
     }
     var id : Int?
     var title : String = ""
+    var img : String = ""
     var description : String = ""
-    var authors : [Author]?
+    var authors : String = ""
     
 }

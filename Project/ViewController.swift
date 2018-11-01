@@ -13,7 +13,7 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        view.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1.0)
+        view.backgroundColor = Constants.backgroundColor
         
     }
     
@@ -23,23 +23,6 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
         let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
         headerImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerImage)
-        //let navigationController = UINavigationController(rootViewController: self)
-        //let navigationController = UINavigationController(navigationBarClass: NavBar.self, toolbarClass: UIToolbar.self)
-
-        //navigationController?.navigationBar = navBar
-        //let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
-        //headerImage.translatesAutoresizingMaskIntoConstraints = false
-        //view.addSubview(headerImage)
-        //navigationController.setNavigationBarHidden(false, animated: true)
-        
-        //NSLayoutConstraint.activate([NSLayoutConstraint(item: <#T##Any#>, attribute: <#T##NSLayoutAttribute#>, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)])
-        //headerImage.topAnchor.constraintGreaterThanOrEqualToSystemSpacingBelow(<#T##anchor: NSLayoutYAxisAnchor##NSLayoutYAxisAnchor#>, multiplier: <#T##CGFloat#>)
-        //view.addSubview(navBar)
-        //navigationController.navigationBar.titleTextAttributes = [
-        //   NSAttributedStringKey.font: UIFont(),
-        //   NSAttributedStringKey.foregroundColor: UIColor.white
-        //]
-        //setTitleToNavBar(title:"Library")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,12 +36,11 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
             SettingsViewController()]
         
     }
+    
     // UITabBarControllerDelegate method
     //when the user hits a tab this methods is called
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected \(viewController.title!)")
         title = viewController.title ?? "Main"
-        //setTitleToNavBar(title: viewController.title ?? "Main")
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,15 +48,6 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
         // Dispose of any resources that can be recreated.
     }
     
-    //functions
-    func setTitleToNavBar(title:String) -> Void {
-        let navItem = UINavigationItem(title:title)
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: nil, action: nil)
-        navItem.rightBarButtonItem = doneItem
-        ([navItem], animated: true)
-    }
-    
-   
     
 }
 

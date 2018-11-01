@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 import Core
-class BooksCellView: UIView, NibLoadable {
+class BooksCellView: UITableViewCell, NibLoadable {
+    
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var bookImage: UIImageView!
-    
+    @IBOutlet weak var portraitImg: UIImageView!
+    @IBOutlet weak var container: UIView!
 }

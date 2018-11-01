@@ -12,11 +12,12 @@
 		410C80D8218A0903009BD6BB /* BooksCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410C80D7218A0903009BD6BB /* BooksCellView.xib */; };
 		410C80DA218A0918009BD6BB /* BooksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80D9218A0918009BD6BB /* BooksTableView.swift */; };
 		410C80DC218A0956009BD6BB /* BooksCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80DB218A0956009BD6BB /* BooksCellView.swift */; };
+		410C80E1218A587B009BD6BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E0218A587B009BD6BB /* Constants.swift */; };
+		410C80E3218A5D56009BD6BB /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E2218A5D56009BD6BB /* BookViewModel.swift */; };
 		41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164721875C380010B3C2 /* LibraryViewController.swift */; };
 		41D5164A21875C5A0010B3C2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164921875C5A0010B3C2 /* Book.swift */; };
 		41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164B21875C750010B3C2 /* BaseModel.swift */; };
 		41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165021875CFB0010B3C2 /* WishListViewController.swift */; };
-		41D5165321875E570010B3C2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165221875E570010B3C2 /* Author.swift */; };
 		41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D51658218762E10010B3C2 /* AddBookViewController.swift */; };
 		41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165A218763000010B3C2 /* RentalsViewController.swift */; };
 		41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165C218763270010B3C2 /* SettingsViewController.swift */; };
@@ -78,11 +79,12 @@
 		410C80D7218A0903009BD6BB /* BooksCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksCellView.xib; sourceTree = "<group>"; };
 		410C80D9218A0918009BD6BB /* BooksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableView.swift; sourceTree = "<group>"; };
 		410C80DB218A0956009BD6BB /* BooksCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCellView.swift; sourceTree = "<group>"; };
+		410C80E0218A587B009BD6BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		410C80E2218A5D56009BD6BB /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		41D5164721875C380010B3C2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		41D5164921875C5A0010B3C2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		41D5164B21875C750010B3C2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		41D5165021875CFB0010B3C2 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
-		41D5165221875E570010B3C2 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		41D51658218762E10010B3C2 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		41D5165A218763000010B3C2 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
 		41D5165C218763270010B3C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -167,12 +169,21 @@
 			path = BooksCell;
 			sourceTree = "<group>";
 		};
+		410C80DF218A585F009BD6BB /* UtilResources */ = {
+			isa = PBXGroup;
+			children = (
+				410C80E0218A587B009BD6BB /* Constants.swift */,
+			);
+			path = UtilResources;
+			sourceTree = "<group>";
+		};
 		41D5164521875BFC0010B3C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				410C80D4218A0874009BD6BB /* BooksCell */,
 				410C80D3218A0863009BD6BB /* BooksTable */,
 				41D5164721875C380010B3C2 /* LibraryViewController.swift */,
+				410C80E2218A5D56009BD6BB /* BookViewModel.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -182,7 +193,6 @@
 			children = (
 				41D5164921875C5A0010B3C2 /* Book.swift */,
 				41D5164B21875C750010B3C2 /* BaseModel.swift */,
-				41D5165221875E570010B3C2 /* Author.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -243,6 +253,7 @@
 		9D1575031CB1B27500EA395E /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				410C80DF218A585F009BD6BB /* UtilResources */,
 				41D51657218760EA0010B3C2 /* Settings */,
 				41D51656218760E30010B3C2 /* Rentals */,
 				41D51655218760D00010B3C2 /* AddBook */,
@@ -496,7 +507,8 @@
 				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
 				41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */,
 				41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */,
-				41D5165321875E570010B3C2 /* Author.swift in Sources */,
+				410C80E3218A5D56009BD6BB /* BookViewModel.swift in Sources */,
+				410C80E1218A587B009BD6BB /* Constants.swift in Sources */,
 				41D5164A21875C5A0010B3C2 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */,

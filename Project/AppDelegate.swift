@@ -28,14 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         let root = ViewController()
         let navigationController = UINavigationController(rootViewController: root)
+        
+        
         navigationController.navigationBar.isTranslucent = true
         navigationController.navigationBar.tintColor = UIColor.white
         // background color
-        navigationController.navigationBar.barTintColor = UIColor(hex: "#00a5f2")
+        navigationController.navigationBar.barTintColor = UIColor.clear
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         //remove shadow from navbar
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
-
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
