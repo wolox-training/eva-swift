@@ -27,9 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          *
          */
         let root = ViewController()
+        //Navigation controller implementation
         let navigationController = UINavigationController(rootViewController: root)
-        
-        
         navigationController.navigationBar.isTranslucent = true
         navigationController.navigationBar.tintColor = UIColor.white
         // background color

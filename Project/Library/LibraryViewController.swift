@@ -13,6 +13,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     private let _viewModel : BookViewModel = BookViewModel()
     private let _view: BooksTableView = BooksTableView.loadFromNib()!
     private var books : [Book] = []
+    
     init() {
         super.init(nibName:nil, bundle:nil)
         tabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
@@ -34,6 +35,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: BooksCellView.self)
+        _view.booksTable.separatorStyle = .none
     }
     
     override func didReceiveMemoryWarning() {

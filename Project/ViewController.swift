@@ -19,7 +19,8 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
     
     convenience init() {
         self.init(nibName:nil, bundle:nil)
-        title = "Library"
+        title = "Library" //default title
+        //adding the header image style
         let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
         headerImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerImage)
@@ -40,6 +41,7 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
     // UITabBarControllerDelegate method
     //when the user hits a tab this methods is called
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        //setting up the title on navbar when the user navigate
         title = viewController.title ?? "Main"
     }
     
