@@ -14,7 +14,7 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
         super.viewDidLoad()
         delegate = self
         view.backgroundColor = .backgroundColor
-        
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: nil, action: nil);
     }
     
     convenience init() {
