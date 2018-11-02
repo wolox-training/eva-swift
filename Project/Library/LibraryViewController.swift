@@ -12,7 +12,6 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private let _viewModel : BookViewModel = BookViewModel()
     private let _view: BooksTableView = BooksTableView.loadFromNib()!
-    private var books : [Book] = []
     
     init() {
         super.init(nibName:nil, bundle:nil)
