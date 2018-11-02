@@ -12,8 +12,6 @@ class AddBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Setting color.
-        view.backgroundColor = UIColor.cyan
         title = "AddBook"
         
         

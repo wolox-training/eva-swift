@@ -8,40 +8,48 @@
 
 import UIKit
 
-final class ViewController:  UITabBarController, UITabBarControllerDelegate {
-
+final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINavigationControllerDelegate {
+    //Custom navbar
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         delegate = self
-        view.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1.0)
-        // navigation bar
+        view.backgroundColor = .backgroundColor
+        
+    }
+    
+    convenience init() {
+        self.init(nibName:nil, bundle:nil)
+        title = "Library" //default title
+        //adding the header image style
+        let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
+        headerImage.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(headerImage)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //setup of all controllers
+        //setup of all controllers'
         viewControllers = [
             LibraryViewController(),
             WishListViewController(),
             AddBookViewController(),
             RentalsViewController(),
             SettingsViewController()]
+        
     }
     
     // UITabBarControllerDelegate method
+    //when the user hits a tab this methods is called
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected \(viewController.title!)")
+        //setting up the title on navbar when the user navigate
+        title = viewController.title ?? "Main"
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
 }
-
-
-
 

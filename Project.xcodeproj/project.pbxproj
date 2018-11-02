@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */ = {isa = PBXBuildFile; fileRef = 410C80CC2187B8D9009BD6BB /* Localizables.strings */; };
+		410C80D6218A08E8009BD6BB /* BooksTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410C80D5218A08E8009BD6BB /* BooksTableView.xib */; };
+		410C80D8218A0903009BD6BB /* BooksCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410C80D7218A0903009BD6BB /* BooksCellView.xib */; };
+		410C80DA218A0918009BD6BB /* BooksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80D9218A0918009BD6BB /* BooksTableView.swift */; };
+		410C80DC218A0956009BD6BB /* BooksCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80DB218A0956009BD6BB /* BooksCellView.swift */; };
+		410C80E3218A5D56009BD6BB /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E2218A5D56009BD6BB /* BookViewModel.swift */; };
+		410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E5218CAB14009BD6BB /* UiColorExtension.swift */; };
 		41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164721875C380010B3C2 /* LibraryViewController.swift */; };
 		41D5164A21875C5A0010B3C2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164921875C5A0010B3C2 /* Book.swift */; };
 		41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5164B21875C750010B3C2 /* BaseModel.swift */; };
 		41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165021875CFB0010B3C2 /* WishListViewController.swift */; };
-		41D5165321875E570010B3C2 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165221875E570010B3C2 /* Author.swift */; };
 		41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D51658218762E10010B3C2 /* AddBookViewController.swift */; };
 		41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165A218763000010B3C2 /* RentalsViewController.swift */; };
 		41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D5165C218763270010B3C2 /* SettingsViewController.swift */; };
@@ -70,11 +75,16 @@
 
 /* Begin PBXFileReference section */
 		410C80CC2187B8D9009BD6BB /* Localizables.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizables.strings; sourceTree = "<group>"; };
+		410C80D5218A08E8009BD6BB /* BooksTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableView.xib; sourceTree = "<group>"; };
+		410C80D7218A0903009BD6BB /* BooksCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksCellView.xib; sourceTree = "<group>"; };
+		410C80D9218A0918009BD6BB /* BooksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableView.swift; sourceTree = "<group>"; };
+		410C80DB218A0956009BD6BB /* BooksCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCellView.swift; sourceTree = "<group>"; };
+		410C80E2218A5D56009BD6BB /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		410C80E5218CAB14009BD6BB /* UiColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiColorExtension.swift; sourceTree = "<group>"; };
 		41D5164721875C380010B3C2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		41D5164921875C5A0010B3C2 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		41D5164B21875C750010B3C2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		41D5165021875CFB0010B3C2 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
-		41D5165221875E570010B3C2 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		41D51658218762E10010B3C2 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		41D5165A218763000010B3C2 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
 		41D5165C218763270010B3C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -141,10 +151,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410C80D3218A0863009BD6BB /* BooksTable */ = {
+			isa = PBXGroup;
+			children = (
+				410C80D5218A08E8009BD6BB /* BooksTableView.xib */,
+				410C80D9218A0918009BD6BB /* BooksTableView.swift */,
+			);
+			path = BooksTable;
+			sourceTree = "<group>";
+		};
+		410C80D4218A0874009BD6BB /* BooksCell */ = {
+			isa = PBXGroup;
+			children = (
+				410C80D7218A0903009BD6BB /* BooksCellView.xib */,
+				410C80DB218A0956009BD6BB /* BooksCellView.swift */,
+			);
+			path = BooksCell;
+			sourceTree = "<group>";
+		};
+		410C80DF218A585F009BD6BB /* UtilResources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UtilResources;
+			sourceTree = "<group>";
+		};
+		410C80E4218CA8F7009BD6BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				410C80E5218CAB14009BD6BB /* UiColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		41D5164521875BFC0010B3C2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				410C80D4218A0874009BD6BB /* BooksCell */,
+				410C80D3218A0863009BD6BB /* BooksTable */,
 				41D5164721875C380010B3C2 /* LibraryViewController.swift */,
+				410C80E2218A5D56009BD6BB /* BookViewModel.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -154,7 +200,6 @@
 			children = (
 				41D5164921875C5A0010B3C2 /* Book.swift */,
 				41D5164B21875C750010B3C2 /* BaseModel.swift */,
-				41D5165221875E570010B3C2 /* Author.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,6 +260,8 @@
 		9D1575031CB1B27500EA395E /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				410C80E4218CA8F7009BD6BB /* Extensions */,
+				410C80DF218A585F009BD6BB /* UtilResources */,
 				41D51657218760EA0010B3C2 /* Settings */,
 				41D51656218760E30010B3C2 /* Rentals */,
 				41D51655218760D00010B3C2 /* AddBook */,
@@ -398,8 +445,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410C80D6218A08E8009BD6BB /* BooksTableView.xib in Resources */,
 				410C80CD2187B8D9009BD6BB /* Localizables.strings in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
+				410C80D8218A0903009BD6BB /* BooksCellView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,10 +515,13 @@
 				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
 				41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */,
 				41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */,
-				41D5165321875E570010B3C2 /* Author.swift in Sources */,
+				410C80E3218A5D56009BD6BB /* BookViewModel.swift in Sources */,
 				41D5164A21875C5A0010B3C2 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */,
+				410C80DA218A0918009BD6BB /* BooksTableView.swift in Sources */,
+				410C80DC218A0956009BD6BB /* BooksCellView.swift in Sources */,
+				410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */,
 				41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
