@@ -13,7 +13,7 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        view.backgroundColor = Constants.backgroundColor
+        view.backgroundColor = .backgroundColor
         
     }
     

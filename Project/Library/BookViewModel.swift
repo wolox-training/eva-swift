@@ -11,19 +11,24 @@ import Core
 class BookViewModel {
     private var books : [Book] = []
     
+    init() {
+        loadBooks();
+    }
+    
     func loadBooks(){
         books = [
-            Book(1,"Titulo 1","img_book_1"),
-            Book(2,"Titulo 2","img_book2"),
-            Book(3,"Titulo 3","img_book3"),
-            Book(3,"Titulo 4","img_book4"),
-            Book(3,"Titulo 5","img_book5"),
+            Book(1, "Titulo 1", "img_book_1"),
+            Book(2, "Titulo 2", "img_book2"),
+            Book(3, "Titulo 3", "img_book3"),
+            Book(3, "Titulo 4", "img_book4"),
+            Book(3, "Titulo 5", "img_book5")
         ]
     }
     
-    func getBooks() -> [Book] {
-        return books
+    func getBookByIndex(index : Int) -> Book {
+        return books[index]
     }
+    
     func getCount() -> Int {
         return books.count
     }

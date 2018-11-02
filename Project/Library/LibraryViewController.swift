@@ -18,9 +18,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.init(nibName:nil, bundle:nil)
         tabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
         //loading the books from the source
-        _viewModel.loadBooks();
-        books = _viewModel.getBooks()
-        view.backgroundColor = Constants.backgroundColor
+        view.backgroundColor = .backgroundColor
 
     }
     
@@ -57,12 +55,11 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
         //indexpat.row
-        let book = books[indexPath.row]
+        let book = _viewModel.getBookByIndex(index: indexPath.row)
         cell.titleLabel.text = book.title
         cell.authorLabel.text = "Author"
         cell.portraitImg.image = UIImage(named: book.img)
-        cell.layer.backgroundColor = UIColor.clear.cgColor
-        cell.backgroundColor = Constants.backgroundColor
+        cell.backgroundColor = .backgroundColor
         return cell
     }
    
