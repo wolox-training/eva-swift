@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
+        NetworkingBootstrapper.shared.bootstrap()
         return true
     }
 
