@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private let _viewModel : BookViewModel = BookViewModel()
+    private let _viewModel : LibraryViewModel = LibraryViewModel()
     private let _view: BooksTableView = BooksTableView.loadFromNib()!
     
     init() {
@@ -57,7 +57,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let book = _viewModel.getBookByIndex(index: indexPath.row)
         cell.titleLabel.text = book.title
         cell.authorLabel.text = "Author"
-        cell.portraitImg.image = UIImage(named: book.img)
+        //cell.portraitImg.image = UIImage(named: book.img)
         cell.backgroundColor = .backgroundColor
         return cell
     }
