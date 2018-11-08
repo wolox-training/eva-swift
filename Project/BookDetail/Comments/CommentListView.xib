@@ -30,6 +30,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="commentTable" destination="cQG-LC-3ry" id="JuE-kL-NaN"/>
+            </connections>
             <point key="canvasLocation" x="61.600000000000001" y="-41.829085457271368"/>
         </view>
     </objects>

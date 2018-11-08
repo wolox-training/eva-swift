@@ -27,10 +27,4 @@ class BooksRepository: AbstractRepository,BooksRepositoryType {
             decode($0).toResult()
         }
     }
-    
- 
-   
-    
-
-    
 }

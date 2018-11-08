@@ -19,7 +19,6 @@ class LibraryViewModel {
     init(booksRepository : BooksRepository = NetworkingBootstrapper.shared.createBooksRepository() ) {
         books = Property(_books)
         self.booksRepository = booksRepository
-        loadBooks()
     }
     
     public func loadBooks(){
@@ -40,11 +39,7 @@ class LibraryViewModel {
                 case .failure(let error) :
                     print(error)
                 }
-                
-                    
-                
             }
-        
     }
     
     

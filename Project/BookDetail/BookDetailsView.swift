@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import Core
+import UIKit
+class BookDetailsView: UIView, NibLoadable {
+    
+    @IBOutlet weak var containerDetails: UIView!
+
+    @IBOutlet weak var containerComments: UIView!
+}

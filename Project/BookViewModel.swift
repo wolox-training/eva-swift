@@ -15,4 +15,15 @@ class BookViewModel {
     var title: String {
         return book.title
     }
+    var author: String {
+        return book.author
+    }
+    
+    var genre: String {
+        return book.genre
+    }
+    
+    var year: String {
+        return book.year
+    }
 }

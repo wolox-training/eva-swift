@@ -16,9 +16,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     init() {
         super.init(nibName:nil, bundle:nil)
         tabBarItem =  UITabBarItem(title: "Library", image: UIImage(named:"ic_library.png"), selectedImage: UIImage(named: "ic_library"))
-        //loading the books from the source
         view.backgroundColor = .backgroundColor
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,8 +31,16 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: BooksCellView.self)
         _view.booksTable.separatorStyle = .none
+        //loading the books from the source
+        _viewModel.loadBooks()
+        _viewModel.books.producer.startWithValues { [unowned self] _ in
+            self._view.booksTable.reloadData()
+        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //_view.booksTable.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,9 +48,12 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func loadView() {
         view = _view
-        
     }
     
+    func openBookDetail(bookViewModel: BookViewModel) -> Void {
+        let destination = BookDetailsViewController(bookViewModel) // Your destination
+        navigationController?.pushViewController(destination, animated: true)
+    }
     
     // table delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,11 +64,17 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         var cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
         //indexpat.row
         let book = _viewModel.getBookByIndex(index: indexPath.row)
+        print(book)
         cell.titleLabel.text = book.title
-        cell.authorLabel.text = "Author"
+        cell.authorLabel.text = book.author
         //cell.portraitImg.image = UIImage(named: book.img)
         cell.backgroundColor = .backgroundColor
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = _viewModel.getBookByIndex(index: indexPath.row)
+        openBookDetail(bookViewModel: book)
     }
    
     

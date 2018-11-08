@@ -62,6 +62,10 @@
                     <constraint firstItem="ObJ-H4-WVU" firstAttribute="trailing" secondItem="5z2-ae-D7y" secondAttribute="trailingMargin" constant="30" id="tYI-WY-Dlf"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentLabel" destination="l7m-a2-b6N" id="AwA-dw-abr"/>
+                <outlet property="nameLabel" destination="blM-3e-dsO" id="1Jj-vT-gEz"/>
+            </connections>
             <point key="canvasLocation" x="108.8" y="-1.7991004497751126"/>
         </tableViewCell>
     </objects>

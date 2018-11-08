@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Core
-class CommentListView: UIView {
+class CommentListView: UIView, NibLoadable {
     
+    @IBOutlet weak var commentTable: UITableView!
 }
