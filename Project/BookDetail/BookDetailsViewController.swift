@@ -37,6 +37,7 @@ class BookDetailsViewController: UIViewController {
         load(childViewController: _commentsViewController,
              into: _view.containerComments)
     }
+    
     override func loadView() {
         view = _view
     }

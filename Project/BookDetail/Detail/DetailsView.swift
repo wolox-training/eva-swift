@@ -27,7 +27,10 @@ class DetailsView: UIView, NibLoadable {
     }
     @IBOutlet weak var addWish: UIButton!{
         didSet{
-            addWish.layer.cornerRadius = 5
+            addWish.layer.cornerRadius = 15
+            addWish.layer.borderWidth = 3
+            addWish.layer.borderColor = UIColor.backgroundColor.cgColor
+        
         }
     }
 }

@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import Core
+import ReactiveSwift
+import Result
+
 class BooksCellView: UITableViewCell, NibLoadable {
     
     
@@ -16,4 +19,5 @@ class BooksCellView: UITableViewCell, NibLoadable {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var portraitImg: UIImageView!
     @IBOutlet weak var container: UIView!
+    
 }

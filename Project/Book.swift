@@ -15,7 +15,8 @@ struct Book {
     var id: Int
     var title: String
     var author: String
-    var image: URL?
+    //var image: URL?
+    var image: String
     var year: String
     var genre: String
     
@@ -23,7 +24,8 @@ struct Book {
         self.id = id
         self.title = title
         self.author = author
-        self.image = imageURL.map { URL(string: $0)! }
+        //self.image = imageURL.map { URL(string: $0)! }
+        self.image = imageURL ?? "http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg"
         self.year = year
         self.genre = genre
     }

@@ -26,6 +26,7 @@
 		410C80E3218A5D56009BD6BB /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E2218A5D56009BD6BB /* LibraryViewModel.swift */; };
 		410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E5218CAB14009BD6BB /* UiColorExtension.swift */; };
 		418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F62194E1F2009C27BB /* CommentViewController.swift */; };
+		418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F92195E685009C27BB /* ImageFetcher.swift */; };
 		41CC93022192524A0093ADB2 /* InputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CC93012192524A0093ADB2 /* InputTextView.xib */; };
 		41CC9305219387890093ADB2 /* NetworkingBootstraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */; };
 		41CC9307219388110093ADB2 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9306219388110093ADB2 /* AuthUser.swift */; };
@@ -112,6 +113,7 @@
 		410C80E2218A5D56009BD6BB /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		410C80E5218CAB14009BD6BB /* UiColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiColorExtension.swift; sourceTree = "<group>"; };
 		418A77F62194E1F2009C27BB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		418A77F92195E685009C27BB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ../../../../../Downloads/ImageFetcher.swift; sourceTree = "<group>"; };
 		41CC93012192524A0093ADB2 /* InputTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextView.xib; sourceTree = "<group>"; };
 		41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootstraper.swift; sourceTree = "<group>"; };
 		41CC9306219388110093ADB2 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
@@ -268,11 +270,12 @@
 			path = BooksCell;
 			sourceTree = "<group>";
 		};
-		410C80DF218A585F009BD6BB /* UtilResources */ = {
+		410C80DF218A585F009BD6BB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				418A77F92195E685009C27BB /* ImageFetcher.swift */,
 			);
-			path = UtilResources;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		410C80E4218CA8F7009BD6BB /* Extensions */ = {
@@ -281,6 +284,13 @@
 				410C80E5218CAB14009BD6BB /* UiColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		418A77F82195E64B009C27BB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		41CC9300219252360093ADB2 /* Ui */ = {
@@ -377,12 +387,13 @@
 		9D1575031CB1B27500EA395E /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				418A77F82195E64B009C27BB /* New Group */,
 				41CC9303219387640093ADB2 /* Bootstrapers */,
 				41CC9300219252360093ADB2 /* Ui */,
 				4105D07E2191F56C008710FD /* Repositories */,
 				4105D0732191E9A0008710FD /* BookDetail */,
 				410C80E4218CA8F7009BD6BB /* Extensions */,
-				410C80DF218A585F009BD6BB /* UtilResources */,
+				410C80DF218A585F009BD6BB /* Util */,
 				41D51657218760EA0010B3C2 /* Settings */,
 				41D51656218760E30010B3C2 /* Rentals */,
 				41D51655218760D00010B3C2 /* AddBook */,
@@ -657,6 +668,7 @@
 				41D5164A21875C5A0010B3C2 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */,
+				418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */,
 				4105D08D2191FAF2008710FD /* SuggestionsView.swift in Sources */,
 				41CC930F2194C35E0093ADB2 /* DetailsViewController.swift in Sources */,
 				410C80DA218A0918009BD6BB /* BooksTableView.swift in Sources */,

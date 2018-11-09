@@ -7,8 +7,11 @@
 //
 
 import Foundation
-class BookViewModel {
+import Core
+class BookViewModel : ImageFetcher {
     private let book : Book
+    public var isLoad :Bool = false
+    public var imageLoad : UIImage = UIImage()
     init(book : Book) {
         self.book = book
     }
@@ -25,5 +28,8 @@ class BookViewModel {
     
     var year: String {
         return book.year
+    }
+    var image: String {
+        return book.image
     }
 }
