@@ -11,11 +11,12 @@ import Core
 import ReactiveSwift
 import Result
 class LibraryViewModel {
-    //private var books : [Book] = []
     private let _books = MutableProperty<[BookViewModel]>([])
-    public let books:Property<[BookViewModel]>
     private var currentPage : Int  = 1
-    let booksRepository : BooksRepository
+    
+    public let books:Property<[BookViewModel]>
+    public let booksRepository : BooksRepository
+    
     init(booksRepository : BooksRepository = NetworkingBootstrapper.shared.createBooksRepository() ) {
         books = Property(_books)
         self.booksRepository = booksRepository
@@ -41,7 +42,6 @@ class LibraryViewModel {
                 }
             }
     }
-    
     
     func getBookByIndex(index : Int) -> BookViewModel {
         return books.value[index]

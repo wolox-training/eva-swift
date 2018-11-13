@@ -12,9 +12,14 @@ import Core
 class DetailsViewController: UIViewController {
     private var _view: DetailsView = DetailsView.loadFromNib()!
     private var _viewModel : BookViewModel
+    
     init(_ viewModel : BookViewModel) {
         _viewModel = viewModel
         super.init(nibName:nil, bundle:nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func loadView() {
@@ -25,15 +30,9 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         _view.title.text = _viewModel.title
         _view.author.text = _viewModel.author
+        _view.portrait.image = _viewModel.imageLoad
         _view.genre.text = _viewModel.genre
         _view.year.text = _viewModel.year
-
-
-        //view.backgroundColor = .backgroundColor
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func didReceiveMemoryWarning() {

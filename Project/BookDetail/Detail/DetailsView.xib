@@ -23,13 +23,13 @@
                             <rect key="frame" x="24" y="-25" width="335" height="270"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxY-PG-Ruh">
-                                    <rect key="frame" x="30" y="155" width="275" height="30"/>
+                                    <rect key="frame" x="30" y="149" width="275" height="36"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="Add To Wishlist">
                                         <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-gL-lET">
+                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-gL-lET">
                                     <rect key="frame" x="30" y="193" width="275" height="30"/>
                                     <color key="backgroundColor" red="0.85490196080000003" green="0.86274509799999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -38,7 +38,7 @@
                                     </state>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-u3-x0C">
-                                    <rect key="frame" x="154" y="33" width="151" height="112"/>
+                                    <rect key="frame" x="140" y="30" width="165" height="112"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaO-De-CZK">
                                             <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="20.333333333333332"/>
@@ -76,9 +76,10 @@
                                     </constraints>
                                 </stackView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="htj-9f-gIh">
-                                    <rect key="frame" x="30" y="31" width="104" height="116"/>
+                                    <rect key="frame" x="30" y="31" width="90" height="110"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="104" id="rzN-EC-xrp"/>
+                                        <constraint firstAttribute="height" constant="110" id="6oQ-v3-sRu"/>
+                                        <constraint firstAttribute="width" constant="90" id="rzN-EC-xrp"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -122,6 +123,7 @@
                 <outlet property="author" destination="sDY-KS-8Wv" id="Z3F-MQ-nAk"/>
                 <outlet property="avaleible" destination="Afm-yN-Pbr" id="BTQ-QD-YAp"/>
                 <outlet property="genre" destination="xmC-Rs-Kce" id="HXo-zr-ERs"/>
+                <outlet property="portrait" destination="htj-9f-gIh" id="lHO-qu-0hW"/>
                 <outlet property="rent" destination="Fq1-gL-lET" id="BKj-8j-qGR"/>
                 <outlet property="title" destination="NaO-De-CZK" id="Wez-4o-9QS"/>
                 <outlet property="year" destination="gtV-ny-9Gq" id="pKk-Kg-4fc"/>

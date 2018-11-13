@@ -15,12 +15,11 @@ import Argo
 protocol BooksRepositoryType {
     func fetchBooks(page:Int) -> SignalProducer<[Book],RepositoryError>
 }
-class BooksRepository: AbstractRepository,BooksRepositoryType {
+class BooksRepository: AbstractRepository, BooksRepositoryType {
     static let fetchPath = "books"
     static let pageSize = 10
     static let pageKey = "page"
-    //static let host = "http://"
-    func fetchBooks(page: Int) -> SignalProducer<[Book], RepositoryError> {
+    func fetchBooks(page: Int) -> SignalProducer<[Book],  RepositoryError> {
         let path = BooksRepository.fetchPath
         let parameters = [BooksRepository.pageKey: page, "amount": BooksRepository.pageSize]
         return performRequest(method: .get, path: path,parameters: parameters) {

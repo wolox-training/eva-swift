@@ -11,11 +11,8 @@ import UIKit
 import Core
 class DetailsView: UIView, NibLoadable {
     
-    @IBOutlet weak var title: UILabel!{
-        didSet{
-            
-        }
-    }
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var portrait: UIImageView!
     @IBOutlet weak var avaleible: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var year: UILabel!
@@ -25,6 +22,7 @@ class DetailsView: UIView, NibLoadable {
             rent.layer.cornerRadius = 15
         }
     }
+    
     @IBOutlet weak var addWish: UIButton!{
         didSet{
             addWish.layer.cornerRadius = 15

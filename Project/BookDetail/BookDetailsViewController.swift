@@ -13,8 +13,6 @@ class BookDetailsViewController: UIViewController {
     private var _viewModelbook: BookViewModel
     private let _detailsViewController: DetailsViewController
     private let _commentsViewController: CommentViewController
-
-    
     private let _view : BookDetailsView = BookDetailsView.loadFromNib()!
     
     init(_ viewModel : BookViewModel) {
