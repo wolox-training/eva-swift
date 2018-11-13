@@ -7,17 +7,41 @@
 //
 
 import Foundation
-class Book : BaseModel {
+import Argo
+import Curry
+import Runes
+struct Book {
     
-    init(_ id: Int,_ title: String , _ img:String) {
+    var id: Int
+    var title: String
+    var author: String
+    //var image: URL?
+    var image: String
+    var year: String
+    var genre: String
+    
+    init(id: Int, title: String, author: String, imageURL: String?, year: String, genre: String) {
         self.id = id
         self.title = title
-        self.img = img
+        self.author = author
+        //self.image = imageURL.map { URL(string: $0)! }
+        self.image = imageURL ?? "http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg"
+        self.year = year
+        self.genre = genre
     }
-    var id : Int?
-    var title : String = ""
-    var img : String = ""
-    var description : String = ""
-    var authors : String = ""
+    
+}
+
+extension Book: Argo.Decodable {
+    
+    static func decode(_ json: JSON) -> Decoded<Book> {
+        return curry(Book.init)
+            <^> json <| "id"
+            <*> json <| "title"
+            <*> json <| "author"
+            <*> json <|? "image_url"
+            <*> json <| "year"
+            <*> json <| "genre"
+    }
     
 }

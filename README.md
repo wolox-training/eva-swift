@@ -1,4 +1,4 @@
-%project-name iOS
+%eva-swift iOS
 ----------------
 
 %project-ci-badge

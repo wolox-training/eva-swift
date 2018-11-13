@@ -14,7 +14,6 @@ class AddBookViewController: UIViewController {
         super.viewDidLoad()
         title = "AddBook"
         
-        
     }
     convenience init() {
         self.init(nibName:nil, bundle:nil)

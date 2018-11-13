@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="202" id="rfb-4x-XUr" customClass="CommentView" customModule="Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="202"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rfb-4x-XUr" id="5z2-ae-D7y">
+                <rect key="frame" x="0.0" y="0.0" width="518" height="201.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObJ-H4-WVU">
+                        <rect key="frame" x="50" y="11" width="478" height="180"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYt-wE-m6y">
+                                <rect key="frame" x="14" y="22" width="45" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ekY-xs-dVe"/>
+                                    <constraint firstAttribute="width" constant="45" id="z6m-bZ-oxt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AuX-vQ-6Xa">
+                                <rect key="frame" x="109" y="22" width="85.5" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blM-3e-dsO">
+                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-a2-b6N">
+                                        <rect key="frame" x="0.0" y="28.5" width="85.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vYt-wE-m6y" firstAttribute="leading" secondItem="ObJ-H4-WVU" secondAttribute="leading" constant="14" id="Eei-GE-afb"/>
+                            <constraint firstItem="vYt-wE-m6y" firstAttribute="top" secondItem="ObJ-H4-WVU" secondAttribute="top" constant="22" id="Ncf-wM-hGE"/>
+                            <constraint firstItem="AuX-vQ-6Xa" firstAttribute="leading" secondItem="vYt-wE-m6y" secondAttribute="trailing" constant="50" id="V2T-qX-RVd"/>
+                            <constraint firstItem="AuX-vQ-6Xa" firstAttribute="top" secondItem="ObJ-H4-WVU" secondAttribute="top" constant="22" id="qkr-Yn-pEJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ObJ-H4-WVU" firstAttribute="top" secondItem="5z2-ae-D7y" secondAttribute="topMargin" id="2u7-s7-Itp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ObJ-H4-WVU" secondAttribute="bottom" id="MLG-PN-EXl"/>
+                    <constraint firstItem="ObJ-H4-WVU" firstAttribute="leading" secondItem="5z2-ae-D7y" secondAttribute="leadingMargin" constant="30" id="QRb-Kr-gHl"/>
+                    <constraint firstItem="ObJ-H4-WVU" firstAttribute="trailing" secondItem="5z2-ae-D7y" secondAttribute="trailingMargin" constant="30" id="tYI-WY-Dlf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentLabel" destination="l7m-a2-b6N" id="AwA-dw-abr"/>
+                <outlet property="nameLabel" destination="blM-3e-dsO" id="1Jj-vT-gEz"/>
+            </connections>
+            <point key="canvasLocation" x="108.8" y="-1.7991004497751126"/>
+        </tableViewCell>
+    </objects>
+</document>
