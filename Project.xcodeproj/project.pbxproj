@@ -14,7 +14,6 @@
 		4105D0842191F7D4008710FD /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D0832191F7D4008710FD /* CommentView.xib */; };
 		4105D0862191F819008710FD /* CommentListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D0852191F819008710FD /* CommentListView.xib */; };
 		4105D0882191F843008710FD /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D0872191F843008710FD /* BookDetailsViewController.swift */; };
-		4105D08A2191F87F008710FD /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D0892191F87F008710FD /* BookDetailsViewModel.swift */; };
 		4105D08D2191FAF2008710FD /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D08C2191FAF2008710FD /* SuggestionsView.swift */; };
 		4105D08F2191FB00008710FD /* SuggestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4105D08E2191FB00008710FD /* SuggestionsView.xib */; };
 		4105D09121922925008710FD /* BooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105D09021922925008710FD /* BooksRepository.swift */; };
@@ -27,6 +26,10 @@
 		410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E5218CAB14009BD6BB /* UiColorExtension.swift */; };
 		418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F62194E1F2009C27BB /* CommentViewController.swift */; };
 		418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F92195E685009C27BB /* ImageFetcher.swift */; };
+		418A77FC219B59A7009C27BB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FB219B59A7009C27BB /* Comment.swift */; };
+		418A77FF219B60E0009C27BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FE219B60E0009C27BB /* User.swift */; };
+		418A7801219B67C5009C27BB /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A7800219B67C5009C27BB /* CommentViewModel.swift */; };
+		418A7803219B6CC4009C27BB /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A7802219B6CC4009C27BB /* CommentListViewModel.swift */; };
 		41CC93022192524A0093ADB2 /* InputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CC93012192524A0093ADB2 /* InputTextView.xib */; };
 		41CC9305219387890093ADB2 /* NetworkingBootstraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */; };
 		41CC9307219388110093ADB2 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9306219388110093ADB2 /* AuthUser.swift */; };
@@ -101,7 +104,6 @@
 		4105D0832191F7D4008710FD /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
 		4105D0852191F819008710FD /* CommentListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentListView.xib; sourceTree = "<group>"; };
 		4105D0872191F843008710FD /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
-		4105D0892191F87F008710FD /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		4105D08C2191FAF2008710FD /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		4105D08E2191FB00008710FD /* SuggestionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsView.xib; sourceTree = "<group>"; };
 		4105D09021922925008710FD /* BooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksRepository.swift; sourceTree = "<group>"; };
@@ -114,6 +116,10 @@
 		410C80E5218CAB14009BD6BB /* UiColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiColorExtension.swift; sourceTree = "<group>"; };
 		418A77F62194E1F2009C27BB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		418A77F92195E685009C27BB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ../../../../../Downloads/ImageFetcher.swift; sourceTree = "<group>"; };
+		418A77FB219B59A7009C27BB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		418A77FE219B60E0009C27BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		418A7800219B67C5009C27BB /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		418A7802219B6CC4009C27BB /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
 		41CC93012192524A0093ADB2 /* InputTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextView.xib; sourceTree = "<group>"; };
 		41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootstraper.swift; sourceTree = "<group>"; };
 		41CC9306219388110093ADB2 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
@@ -198,7 +204,6 @@
 				4105D0752191EB39008710FD /* Comments */,
 				4105D0742191EB2C008710FD /* Detail */,
 				4105D0872191F843008710FD /* BookDetailsViewController.swift */,
-				4105D0892191F87F008710FD /* BookDetailsViewModel.swift */,
 				41CC93102194CF600093ADB2 /* BookDetailsView.xib */,
 				41CC93122194CF910093ADB2 /* BookDetailsView.swift */,
 			);
@@ -222,6 +227,7 @@
 				4105D07A2191EB85008710FD /* CommentListView.swift */,
 				4105D0852191F819008710FD /* CommentListView.xib */,
 				418A77F62194E1F2009C27BB /* CommentViewController.swift */,
+				418A7802219B6CC4009C27BB /* CommentListViewModel.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -327,6 +333,9 @@
 				41D5164B21875C750010B3C2 /* BaseModel.swift */,
 				41CC9306219388110093ADB2 /* AuthUser.swift */,
 				41CC930821938DC10093ADB2 /* BookViewModel.swift */,
+				418A77FB219B59A7009C27BB /* Comment.swift */,
+				418A77FE219B60E0009C27BB /* User.swift */,
+				418A7800219B67C5009C27BB /* CommentViewModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -661,6 +670,7 @@
 				4105D0822191F7C5008710FD /* CommentView.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
+				418A77FF219B60E0009C27BB /* User.swift in Sources */,
 				41CC9307219388110093ADB2 /* AuthUser.swift in Sources */,
 				41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */,
 				41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */,
@@ -672,16 +682,18 @@
 				4105D08D2191FAF2008710FD /* SuggestionsView.swift in Sources */,
 				41CC930F2194C35E0093ADB2 /* DetailsViewController.swift in Sources */,
 				410C80DA218A0918009BD6BB /* BooksTableView.swift in Sources */,
+				418A7801219B67C5009C27BB /* CommentViewModel.swift in Sources */,
 				41CC9305219387890093ADB2 /* NetworkingBootstraper.swift in Sources */,
 				41CC930921938DC10093ADB2 /* BookViewModel.swift in Sources */,
 				410C80DC218A0956009BD6BB /* BooksCellView.swift in Sources */,
+				418A7803219B6CC4009C27BB /* CommentListViewModel.swift in Sources */,
 				4105D09121922925008710FD /* BooksRepository.swift in Sources */,
 				410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */,
 				41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */,
 				41CC93132194CF910093ADB2 /* BookDetailsView.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
-				4105D08A2191F87F008710FD /* BookDetailsViewModel.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				418A77FC219B59A7009C27BB /* Comment.swift in Sources */,
 				4105D07D2191EB92008710FD /* DetailsView.swift in Sources */,
 				4105D07B2191EB85008710FD /* CommentListView.swift in Sources */,
 				41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */,

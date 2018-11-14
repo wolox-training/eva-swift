@@ -18,7 +18,7 @@ class BookDetailsViewController: UIViewController {
     init(_ viewModel : BookViewModel) {
         self._viewModelbook = viewModel
         self._detailsViewController = DetailsViewController(viewModel)
-        self._commentsViewController = CommentViewController()
+        self._commentsViewController = CommentViewController(bookId: _viewModelbook.id)
         super.init(nibName:nil, bundle:nil)
         let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
         headerImage.translatesAutoresizingMaskIntoConstraints = false

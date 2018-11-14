@@ -22,21 +22,26 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAo-h9-qjp" customClass="Container">
                             <rect key="frame" x="24" y="-25" width="335" height="270"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxY-PG-Ruh">
-                                    <rect key="frame" x="30" y="149" width="275" height="36"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="Add To Wishlist">
-                                        <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-gL-lET">
-                                    <rect key="frame" x="30" y="193" width="275" height="30"/>
-                                    <color key="backgroundColor" red="0.85490196080000003" green="0.86274509799999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                    <state key="normal" title="Rent">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-5w-J4K">
+                                    <rect key="frame" x="30" y="172" width="275" height="68"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxY-PG-Ruh">
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Add To Wishlist">
+                                                <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-gL-lET">
+                                            <rect key="frame" x="0.0" y="38" width="275" height="30"/>
+                                            <color key="backgroundColor" red="0.85490196080000003" green="0.86274509799999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Rent">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-u3-x0C">
                                     <rect key="frame" x="140" y="30" width="165" height="112"/>
                                     <subviews>
@@ -87,18 +92,14 @@
                             <constraints>
                                 <constraint firstItem="htj-9f-gIh" firstAttribute="centerY" secondItem="gfz-u3-x0C" secondAttribute="centerY" id="4aS-V7-KSR"/>
                                 <constraint firstAttribute="width" constant="335" id="4nT-a9-lGI"/>
-                                <constraint firstAttribute="trailing" secondItem="zxY-PG-Ruh" secondAttribute="trailing" constant="30" id="8U5-TD-HsV"/>
-                                <constraint firstItem="Fq1-gL-lET" firstAttribute="top" secondItem="zxY-PG-Ruh" secondAttribute="bottom" constant="8" symbolic="YES" id="GT2-Cz-jrL"/>
-                                <constraint firstItem="zxY-PG-Ruh" firstAttribute="leading" secondItem="UAo-h9-qjp" secondAttribute="leading" constant="30" id="IUl-Qv-00G"/>
-                                <constraint firstItem="zxY-PG-Ruh" firstAttribute="top" secondItem="htj-9f-gIh" secondAttribute="bottom" constant="8" symbolic="YES" id="L7a-5w-skm"/>
+                                <constraint firstAttribute="trailing" secondItem="vW2-5w-J4K" secondAttribute="trailing" constant="30" id="B6I-Aw-4wg"/>
                                 <constraint firstItem="gfz-u3-x0C" firstAttribute="leading" secondItem="htj-9f-gIh" secondAttribute="trailing" constant="20" id="TXN-ej-NiE"/>
-                                <constraint firstAttribute="trailing" secondItem="Fq1-gL-lET" secondAttribute="trailing" constant="30" id="Vm3-qP-Mka"/>
+                                <constraint firstItem="vW2-5w-J4K" firstAttribute="top" secondItem="gfz-u3-x0C" secondAttribute="bottom" constant="30" id="VhH-1y-gJj"/>
                                 <constraint firstItem="htj-9f-gIh" firstAttribute="leading" secondItem="UAo-h9-qjp" secondAttribute="leading" constant="30" id="ZMb-lY-ZTc"/>
                                 <constraint firstAttribute="trailing" secondItem="gfz-u3-x0C" secondAttribute="trailing" constant="30" id="eN6-kb-WNm"/>
                                 <constraint firstItem="htj-9f-gIh" firstAttribute="top" secondItem="UAo-h9-qjp" secondAttribute="top" constant="31" id="fWd-js-nJi"/>
-                                <constraint firstItem="Fq1-gL-lET" firstAttribute="leading" secondItem="UAo-h9-qjp" secondAttribute="leading" constant="30" id="kk1-qG-PxR"/>
+                                <constraint firstItem="vW2-5w-J4K" firstAttribute="leading" secondItem="UAo-h9-qjp" secondAttribute="leading" constant="30" id="gaI-7h-IGJ"/>
                                 <constraint firstAttribute="height" constant="270" id="nFq-xh-XXr"/>
-                                <constraint firstAttribute="bottom" secondItem="Fq1-gL-lET" secondAttribute="bottom" constant="47" id="sKS-3M-mOs"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -128,7 +129,7 @@
                 <outlet property="title" destination="NaO-De-CZK" id="Wez-4o-9QS"/>
                 <outlet property="year" destination="gtV-ny-9Gq" id="pKk-Kg-4fc"/>
             </connections>
-            <point key="canvasLocation" x="55.200000000000003" y="224.88755622188907"/>
+            <point key="canvasLocation" x="54.347826086956523" y="224.18478260869566"/>
         </view>
     </objects>
 </document>

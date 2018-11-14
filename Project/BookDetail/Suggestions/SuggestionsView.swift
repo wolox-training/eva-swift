@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 import Core
-class SuggestionsView: UIView{
+class SuggestionsView: UIView,NibLoadable{
     
 }

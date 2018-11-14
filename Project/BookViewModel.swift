@@ -15,9 +15,15 @@ class BookViewModel : ImageFetcher {
     init(book : Book) {
         self.book = book
     }
+    
+    var id: Int {
+        return book.id
+    }
+    
     var title: String {
         return book.title
     }
+    
     var author: String {
         return book.author
     }
@@ -29,6 +35,7 @@ class BookViewModel : ImageFetcher {
     var year: String {
         return book.year
     }
+    
     var image: String {
         return book.image
     }
