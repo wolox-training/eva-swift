@@ -11,6 +11,34 @@ import Networking
 import ReactiveSwift
 import Result
 import Argo
+import Curry
+import Runes
+
+struct Status {
+    static let available: String = "Avalaible"
+    static let unavailable: String = "Unavalaible"
+
+}
+
+struct Rent {
+    public var id: Int
+    public var from: String
+    public var to: String
+    public var returnedAt: String?
+    
+}
+
+extension Rent: Argo.Decodable {
+    public static func decode(_ json: JSON) -> Decoded<Rent> {
+        return curry(Rent.init)
+            <^> json <| "id"
+            <*> json <| "from"
+            <*> json <| "to"
+            <*> json <|? "returned_at"
+
+    }
+}
+
 
 protocol BooksRepositoryType {
     func fetchBooks(page:Int) -> SignalProducer<[Book],RepositoryError>
@@ -29,9 +57,22 @@ class BooksRepository: AbstractRepository, BooksRepositoryType {
     }
     
     func fetchBookComments(bookId : Int) -> SignalProducer<[Comment],  RepositoryError> {
-        let path = BooksRepository.fetchPath
-        return performRequest(method: .get, path:  path+"/"+String(bookId)+"/comments") {
+        let path = BooksRepository.fetchPath+"/"+String(bookId)+"/comments"
+        return performRequest(method: .get, path: path) {
             decode($0).toResult()
         }
+    }
+    
+    func fetchBookStatus(bookId: Int) -> SignalProducer<Bool, RepositoryError> {
+        let path = BooksRepository.fetchPath+"/"+String(bookId)+"/rents"
+        let result: SignalProducer<[Rent], RepositoryError> = performRequest(method: .get, path: path) { decode($0).toResult() }
+        
+        let resultRents: SignalProducer<Bool, RepositoryError> = result.map({ rents in
+            let rent = rents.filter({ (rent) in
+                rent.returnedAt != .none
+            }).first
+            return rent != nil
+        })
+        return resultRents
     }
 }

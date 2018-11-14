@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+//import WolmoCore
 import Core
 class DetailsViewController: UIViewController {
     private var _view: DetailsView = DetailsView.loadFromNib()!
@@ -33,9 +34,22 @@ class DetailsViewController: UIViewController {
         _view.portrait.image = _viewModel.imageLoad
         _view.genre.text = _viewModel.genre
         _view.year.text = _viewModel.year
+        if (_viewModel.status == Book.available){
+            setupAvailableBook()
+        }else{
+            setupUnavailableBook()
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func setupAvailableBook(){
+        _view.avaleible.text = _viewModel.status
+        _view.avaleible.textColor = UIColor.green
+    
+        _view.rent.gradient = ViewGradient(colors: [UIColor.blue,UIColor.red],direction: GradientDirection.leftToRight)
+    }
+    
+    func setupUnavailableBook() {
+        _view.avaleible.text = _viewModel.status
+        _view.avaleible.textColor = UIColor.red
     }
 }

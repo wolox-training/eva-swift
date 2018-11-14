@@ -8,6 +8,7 @@
 
 import Foundation
 import Core
+import Networking
 import ReactiveSwift
 import Result
 class LibraryViewModel {
@@ -42,6 +43,11 @@ class LibraryViewModel {
                 }
             }
     }
+    
+    public func loadStatus(bookId : Int) ->SignalProducer<Bool, RepositoryError> {
+        return booksRepository.fetchBookStatus(bookId: bookId)
+    }
+    
     
     func getBookByIndex(index : Int) -> BookViewModel {
         return books.value[index]

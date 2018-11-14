@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Core
+//import Core
 class BookDetailsViewController: UIViewController {
     private var _viewModelbook: BookViewModel
     private let _detailsViewController: DetailsViewController

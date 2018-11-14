@@ -31,4 +31,5 @@ class DetailsView: UIView, NibLoadable {
         
         }
     }
+    
 }
