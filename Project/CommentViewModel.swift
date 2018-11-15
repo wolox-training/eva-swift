@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Core
+import WolmoCore
+
 class CommentViewModel: ImageFetcher {
     private let comment : Comment
     public var isLoad :Bool = false

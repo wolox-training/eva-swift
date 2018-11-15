@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-//import Core
+//import WolmoCore
+
 class BookDetailsViewController: UIViewController {
     private var _viewModelbook: BookViewModel
     private let _detailsViewController: DetailsViewController
@@ -42,10 +43,5 @@ class BookDetailsViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

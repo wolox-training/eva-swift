@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Core
+import WolmoCore
+
 class BooksTableView: UIView, NibLoadable {
     
     @IBOutlet weak var booksTable: UITableView!

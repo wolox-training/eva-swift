@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Core
+import WolmoCore
+
 class BookViewModel : ImageFetcher {
     private let book : Book
     public var isLoad :Bool = false

@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Core
+import WolmoCore
+
 class SuggestionsView: UIView,NibLoadable{
     
 }

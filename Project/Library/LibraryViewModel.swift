@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Core
+import WolmoCore
+
 import Networking
 import ReactiveSwift
 import Result

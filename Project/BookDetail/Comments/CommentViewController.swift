@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Core
+import WolmoCore
+
 class CommentViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
     private var _view: CommentListView = CommentListView.loadFromNib()!

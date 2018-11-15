@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-//import WolmoCore
-import Core
+import WolmoCore
+
 class DetailsViewController: UIViewController {
     private var _view: DetailsView = DetailsView.loadFromNib()!
     private var _viewModel : BookViewModel
@@ -44,8 +44,8 @@ class DetailsViewController: UIViewController {
     func setupAvailableBook(){
         _view.avaleible.text = _viewModel.status
         _view.avaleible.textColor = UIColor.green
-    
-        _view.rent.gradient = ViewGradient(colors: [UIColor.blue,UIColor.red],direction: GradientDirection.leftToRight)
+        _view.rent.enable()
+        _view.rent.layer.cornerRadius = 15
     }
     
     func setupUnavailableBook() {

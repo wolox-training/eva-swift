@@ -24,6 +24,7 @@
 		410C80DC218A0956009BD6BB /* BooksCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80DB218A0956009BD6BB /* BooksCellView.swift */; };
 		410C80E3218A5D56009BD6BB /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E2218A5D56009BD6BB /* LibraryViewModel.swift */; };
 		410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410C80E5218CAB14009BD6BB /* UiColorExtension.swift */; };
+		41645480219DC64800C423D8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164547F219DC64800C423D8 /* UIButtonExtension.swift */; };
 		418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F62194E1F2009C27BB /* CommentViewController.swift */; };
 		418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F92195E685009C27BB /* ImageFetcher.swift */; };
 		418A77FC219B59A7009C27BB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FB219B59A7009C27BB /* Comment.swift */; };
@@ -114,6 +115,7 @@
 		410C80DB218A0956009BD6BB /* BooksCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCellView.swift; sourceTree = "<group>"; };
 		410C80E2218A5D56009BD6BB /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		410C80E5218CAB14009BD6BB /* UiColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiColorExtension.swift; sourceTree = "<group>"; };
+		4164547F219DC64800C423D8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		418A77F62194E1F2009C27BB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		418A77F92195E685009C27BB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ../../../../../Downloads/ImageFetcher.swift; sourceTree = "<group>"; };
 		418A77FB219B59A7009C27BB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				410C80E5218CAB14009BD6BB /* UiColorExtension.swift */,
+				4164547F219DC64800C423D8 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WolmoCore.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -689,6 +693,7 @@
 				418A7803219B6CC4009C27BB /* CommentListViewModel.swift in Sources */,
 				4105D09121922925008710FD /* BooksRepository.swift in Sources */,
 				410C80E6218CAB14009BD6BB /* UiColorExtension.swift in Sources */,
+				41645480219DC64800C423D8 /* UIButtonExtension.swift in Sources */,
 				41D5165B218763000010B3C2 /* RentalsViewController.swift in Sources */,
 				41CC93132194CF910093ADB2 /* BookDetailsView.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,

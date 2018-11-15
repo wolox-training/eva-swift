@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Core
+import WolmoCore
+
 import ReactiveSwift
 import Result
 class CommentListViewModel  {
