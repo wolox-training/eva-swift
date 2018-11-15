@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RentalsView" customModule="Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xx8-Y9-BU3">
+                    <rect key="frame" x="20" y="600" width="335" height="62"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oks-Qx-HEj">
+                    <rect key="frame" x="20" y="40" width="335" height="540"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-rh-Bst">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="540"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Z5e-rh-Bst" firstAttribute="top" secondItem="oks-Qx-HEj" secondAttribute="top" id="E85-1O-UrV"/>
+                        <constraint firstAttribute="trailing" secondItem="Z5e-rh-Bst" secondAttribute="trailing" id="Sqp-u5-kjM"/>
+                        <constraint firstItem="Z5e-rh-Bst" firstAttribute="leading" secondItem="oks-Qx-HEj" secondAttribute="leading" id="db4-VQ-fE9"/>
+                        <constraint firstAttribute="bottom" secondItem="Z5e-rh-Bst" secondAttribute="bottom" id="eK3-1p-cvX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="oks-Qx-HEj" secondAttribute="bottom" constant="20" id="74G-1X-M1V"/>
+                <constraint firstItem="oks-Qx-HEj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="9sa-ro-rUf"/>
+                <constraint firstItem="oks-Qx-HEj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Vje-3M-qqN"/>
+                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="600" id="YKw-qY-5J3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xx8-Y9-BU3" secondAttribute="trailing" constant="20" id="iMR-p9-CBs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oks-Qx-HEj" secondAttribute="trailing" constant="20" id="jIn-FR-7ib"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xx8-Y9-BU3" secondAttribute="bottom" constant="5" id="kiW-fZ-M7w"/>
+                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rQU-y8-xFz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="booksContainer" destination="oks-Qx-HEj" id="jzB-Gl-Cv3"/>
+                <outlet property="booksTable" destination="Z5e-rh-Bst" id="by1-0X-ADS"/>
+                <outlet property="suggestionsContainer" destination="Xx8-Y9-BU3" id="d8M-7v-Zaj"/>
+            </connections>
+        </view>
+    </objects>
+</document>

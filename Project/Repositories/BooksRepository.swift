@@ -75,4 +75,12 @@ class BooksRepository: AbstractRepository, BooksRepositoryType {
         })
         return resultRents
     }
+    
+    func fetchSuggestions(bookId : Int) -> SignalProducer<[Comment],  RepositoryError> {
+        let path = BooksRepository.fetchPath+"/"+String(bookId)+"/comments"
+        return performRequest(method: .get, path: path) {
+            decode($0).toResult()
+        }
+    }
+    
 }
