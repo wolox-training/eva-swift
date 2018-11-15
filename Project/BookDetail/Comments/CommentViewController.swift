@@ -15,6 +15,7 @@ class CommentViewController: UIViewController , UITableViewDelegate, UITableView
     private var _view: CommentListView = CommentListView.loadFromNib()!
     private let _viewModel: CommentListViewModel = CommentListViewModel()
     private var bookId :Int
+    
     init(bookId: Int) {
         self.bookId = bookId
         super.init(nibName:nil, bundle:nil)        
@@ -44,14 +45,12 @@ class CommentViewController: UIViewController , UITableViewDelegate, UITableView
     }
     //table functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(_viewModel.getCount())
         return _viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeue(cell: CommentView.self, for: indexPath)!
         let comment = _viewModel.getByIndex(index: indexPath.row)
-        print(comment.content)
         cell.commentLabel.text = comment.content
         cell.nameLabel.text = comment.user.firstName
         if(!comment.isLoad){// prevent re fetching the book image
@@ -67,7 +66,7 @@ class CommentViewController: UIViewController , UITableViewDelegate, UITableView
                     print("Error Finding Image",error)
                 }
             }
-        }else{
+        } else {
             cell.avatar.image = comment.imageLoad
         }
         return cell

@@ -15,9 +15,9 @@ extension UIButton {
         self.setGradient(colors: [UIColor(hex:"00ADEE")!, UIColor(hex: "38CCCD")!])
     }
     
-    /*func disable() {
+    func disable() {
         self.setGradient(colors: [UIColor(hex:"EAEAEA")!, UIColor(hex: "F4F4F4")!])
-    }*/
+    }
     
     func setGradient(colors: [UIColor]){
         self.gradient = ViewGradient(colors: colors, direction: .leftToRight)

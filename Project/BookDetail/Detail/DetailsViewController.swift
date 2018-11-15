@@ -36,7 +36,7 @@ class DetailsViewController: UIViewController {
         _view.year.text = _viewModel.year
         if (_viewModel.status == Book.available){
             setupAvailableBook()
-        }else{
+        } else {
             setupUnavailableBook()
         }
     }

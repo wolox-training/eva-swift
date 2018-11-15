@@ -22,13 +22,10 @@ class CommentListViewModel  {
         comments = Property(_comments)
         self.booksRepository = booksRepository
     }
+    
     public func loadComments(bookId: Int){
         booksRepository.fetchBookComments(bookId: bookId)
-            .map {
-                $0.map {
-                    CommentViewModel(comment: $0)
-                }
-            }
+            .map { $0.map {CommentViewModel(comment: $0) } }
             .startWithResult {
                 [unowned self] result in
                 switch result {
@@ -40,11 +37,13 @@ class CommentListViewModel  {
                 case .failure(let error) :
                     print(error)
                 }
-        }
+            }
     }
+    
     func getByIndex(index:Int) -> CommentViewModel {
         return comments.value[index]
     }
+    
     func getCount() -> Int {
         return comments.value.count
     }
