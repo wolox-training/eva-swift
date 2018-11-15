@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Core
+import WolmoCore
+
 class DetailsView: UIView, NibLoadable {
     
     @IBOutlet weak var title: UILabel!
@@ -31,4 +32,5 @@ class DetailsView: UIView, NibLoadable {
         
         }
     }
+    
 }

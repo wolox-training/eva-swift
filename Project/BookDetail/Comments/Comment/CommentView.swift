@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
-import Core
+import WolmoCore
+
 class CommentView: UITableViewCell ,NibLoadable{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var avatar: UIImageView!{
+        didSet{
+            avatar.layer.cornerRadius = 15
+        }
+    }
 }

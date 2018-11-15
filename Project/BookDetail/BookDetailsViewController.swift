@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Core
+//import WolmoCore
+
 class BookDetailsViewController: UIViewController {
     private var _viewModelbook: BookViewModel
     private let _detailsViewController: DetailsViewController
@@ -18,7 +19,7 @@ class BookDetailsViewController: UIViewController {
     init(_ viewModel : BookViewModel) {
         self._viewModelbook = viewModel
         self._detailsViewController = DetailsViewController(viewModel)
-        self._commentsViewController = CommentViewController()
+        self._commentsViewController = CommentViewController(bookId: _viewModelbook.id)
         super.init(nibName:nil, bundle:nil)
         let headerImage = UIImageView(image: UIImage(named: "bc_nav bar"))
         headerImage.translatesAutoresizingMaskIntoConstraints = false
@@ -42,10 +43,5 @@ class BookDetailsViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

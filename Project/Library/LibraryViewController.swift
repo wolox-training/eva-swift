@@ -52,6 +52,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func openBookDetail(bookViewModel: BookViewModel) -> Void {
+        
         let destination = BookDetailsViewController(bookViewModel) // Your destination
         navigationController?.pushViewController(destination, animated: true)
     }
@@ -91,8 +92,20 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = _viewModel.getBookByIndex(index: indexPath.row)
-        openBookDetail(bookViewModel: book)
-    }
+        _viewModel.loadStatus(bookId: book.id).producer.startWithResult { (result) in
+            switch result {
+                case .success(let response) :
+                    if(response){
+                        book.status = Book.available
+                        book.statusColor = UIColor.green
+                    }
+                    self.openBookDetail(bookViewModel: book)
+                case .failure(let error) :
+                    print(error)
+                }
+            }
+        }
+    
     
     //Pagination
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

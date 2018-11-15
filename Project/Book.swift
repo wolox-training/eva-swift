@@ -19,6 +19,9 @@ struct Book {
     var image: String
     var year: String
     var genre: String
+    static public let available = "Available"
+    static public let unavailable = "Unavailable"
+
     
     init(id: Int, title: String, author: String, imageURL: String?, year: String, genre: String) {
         self.id = id

@@ -17,11 +17,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Hy-90-J18">
-                    <rect key="frame" x="20" y="389" width="335" height="258"/>
+                    <rect key="frame" x="20" y="350" width="335" height="297"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-67-U0N">
-                    <rect key="frame" x="20" y="109" width="335" height="270"/>
+                    <rect key="frame" x="20" y="70" width="335" height="270"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="270" id="sid-DU-qR4"/>
@@ -31,7 +31,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="0Hy-90-J18" firstAttribute="top" secondItem="6jw-67-U0N" secondAttribute="bottom" constant="10" id="3dq-oU-bPY"/>
-                <constraint firstItem="6jw-67-U0N" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="89" id="5lE-DK-QIv"/>
+                <constraint firstItem="6jw-67-U0N" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="5lE-DK-QIv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0Hy-90-J18" secondAttribute="bottom" constant="20" id="NcV-vl-DhO"/>
                 <constraint firstItem="0Hy-90-J18" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dPo-9H-X3g"/>
                 <constraint firstItem="6jw-67-U0N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="eQJ-SC-xgE"/>
