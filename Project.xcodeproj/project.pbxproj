@@ -31,6 +31,9 @@
 		41645496219E052C00C423D8 /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41645495219E052C00C423D8 /* SuggestionCell.xib */; };
 		41645498219E064A00C423D8 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41645497219E064A00C423D8 /* SuggestionsViewController.swift */; };
 		4164549A219E073100C423D8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41645499219E073100C423D8 /* UserRepository.swift */; };
+		4164549C219F000600C423D8 /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549B219F000600C423D8 /* SuggestionsViewModel.swift */; };
+		4164549E219F043800C423D8 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549D219F043800C423D8 /* RentalsViewModel.swift */; };
+		416454A0219F0FC300C423D8 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549F219F0FC300C423D8 /* Rent.swift */; };
 		418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F62194E1F2009C27BB /* CommentViewController.swift */; };
 		418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F92195E685009C27BB /* ImageFetcher.swift */; };
 		418A77FC219B59A7009C27BB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FB219B59A7009C27BB /* Comment.swift */; };
@@ -128,6 +131,9 @@
 		41645495219E052C00C423D8 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
 		41645497219E064A00C423D8 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		41645499219E073100C423D8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		4164549B219F000600C423D8 /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
+		4164549D219F043800C423D8 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
+		4164549F219F0FC300C423D8 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		418A77F62194E1F2009C27BB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		418A77F92195E685009C27BB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ../../../../../Downloads/ImageFetcher.swift; sourceTree = "<group>"; };
 		418A77FB219B59A7009C27BB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -271,6 +277,7 @@
 				4164548E219E03E900C423D8 /* SuggestionsCollectionView.swift */,
 				41645490219E041C00C423D8 /* SuggestionsCollectionView.xib */,
 				41645497219E064A00C423D8 /* SuggestionsViewController.swift */,
+				4164549B219F000600C423D8 /* SuggestionsViewModel.swift */,
 			);
 			path = Suggestions;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 				418A77FB219B59A7009C27BB /* Comment.swift */,
 				418A77FE219B60E0009C27BB /* User.swift */,
 				418A7800219B67C5009C27BB /* CommentViewModel.swift */,
+				4164549F219F0FC300C423D8 /* Rent.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -389,6 +397,7 @@
 				41D5165A218763000010B3C2 /* RentalsViewController.swift */,
 				4164548A219DFF5E00C423D8 /* RentalsView.xib */,
 				4164548C219DFF6E00C423D8 /* RentalsView.swift */,
+				4164549D219F043800C423D8 /* RentalsViewModel.swift */,
 			);
 			path = Rentals;
 			sourceTree = "<group>";
@@ -700,6 +709,7 @@
 			files = (
 				418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */,
 				4105D0822191F7C5008710FD /* CommentView.swift in Sources */,
+				4164549C219F000600C423D8 /* SuggestionsViewModel.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				41645494219E04F700C423D8 /* SuggestionCell.swift in Sources */,
 				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
@@ -730,10 +740,12 @@
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				418A77FC219B59A7009C27BB /* Comment.swift in Sources */,
+				4164549E219F043800C423D8 /* RentalsViewModel.swift in Sources */,
 				4105D07D2191EB92008710FD /* DetailsView.swift in Sources */,
 				41645498219E064A00C423D8 /* SuggestionsViewController.swift in Sources */,
 				4105D07B2191EB85008710FD /* CommentListView.swift in Sources */,
 				41D5165D218763270010B3C2 /* SettingsViewController.swift in Sources */,
+				416454A0219F0FC300C423D8 /* Rent.swift in Sources */,
 				4105D0882191F843008710FD /* BookDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

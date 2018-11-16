@@ -9,6 +9,6 @@
 import Foundation
 import WolmoCore
 import UIKit
-class SuggestionCell: UICollectionViewCell {
-    
+class SuggestionCell: UICollectionViewCell, NibLoadable {
+    @IBOutlet weak var image: UIImageView!
 }

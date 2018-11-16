@@ -16,15 +16,15 @@ import Runes
 class UserRepository: AbstractRepository {
     private static let fetchPath = "users"
     
-    func fetchUser() -> SignalProducer<[User],  RepositoryError> {
-        let path = UserRepository.fetchPath
+    func fetchUser() -> SignalProducer<User,  RepositoryError> {
+        let path = UserRepository.fetchPath + "/me"
         return performRequest(method: .get, path: path) {
             decode($0).toResult()
         }
     }
     
-    func fetchUserRents() -> SignalProducer<[User],  RepositoryError> {
-        let path = UserRepository.fetchPath
+    func fetchUserRents(userId:Int) -> SignalProducer<[Rent],  RepositoryError> {
+        let path = UserRepository.fetchPath + "/" + String(userId) + "/rents"
         return performRequest(method: .get, path: path) {
             decode($0).toResult()
         }

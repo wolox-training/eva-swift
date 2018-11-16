@@ -40,6 +40,10 @@ class NetworkingBootstrapper {
     func createBooksRepository() -> BooksRepository {
         return BooksRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
     }
+    
+    func createUserRepository() -> UserRepository {
+        return UserRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
+    }
 }
 
 // MARK: Private Methods

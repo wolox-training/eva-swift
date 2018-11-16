@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     private let _suggestionsController :SuggestionsViewController
-    private let _viewModel : LibraryViewModel = LibraryViewModel()
-
+    private let _viewModel : RentalsViewModel
+    private let user : User
     private let _view: RentalsView = RentalsView.loadFromNib()!
-    init() {
+    private let bookId: Int =  1// default recommendations
+    
+    init(user:User) {
+        self.user = user
+        _viewModel = RentalsViewModel(user: user)
         self._suggestionsController =
-            SuggestionsViewController()
+            SuggestionsViewController(viewModel :_viewModel)
         super.init(nibName:nil, bundle:nil)
         //tabbar name and style setup
         tabBarItem = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals.png"), selectedImage: UIImage(named: "ic_myrentals.png"))
@@ -24,6 +28,7 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Rentals"
@@ -35,12 +40,16 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
         _view.booksTable.register(cell: BooksCellView.self)
         _view.booksTable.separatorStyle = .none
         //loading the books from the source
-        _viewModel.books.producer.startWithValues { [unowned self] _ in
+        _viewModel.rentals.producer.startWithValues { [unowned self] _ in
             self._view.booksTable.reloadData()
         }
-        _viewModel.loadBooks()
+        _viewModel.loadRents()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        _view.booksTable.reloadData()
+        print(_viewModel.getCount())
+    }
     override func loadView() {
         view = _view
     }
@@ -59,8 +68,8 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
-        let book = _viewModel.getBookByIndex(index: indexPath.row)
-        
+        let book = BookViewModel(book: _viewModel.getByIndex(index: indexPath.row).book)
+        print(book.title)
         cell.titleLabel.text = book.title
         cell.authorLabel.text = book.author
         if(!book.isLoad){// prevent re fetching the book image
