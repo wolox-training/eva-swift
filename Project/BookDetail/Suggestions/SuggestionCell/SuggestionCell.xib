@@ -20,20 +20,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-e8-gIc">
-                        <rect key="frame" x="21" y="0.0" width="92" height="163"/>
+                        <rect key="frame" x="2" y="0.0" width="130" height="163"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="uSi-e8-gIc" firstAttribute="leading" secondItem="H9x-eL-AK3" secondAttribute="leading" constant="21" id="E93-v8-aYI"/>
-                <constraint firstAttribute="bottom" secondItem="uSi-e8-gIc" secondAttribute="bottom" id="FiC-dz-02b"/>
-                <constraint firstAttribute="trailing" secondItem="uSi-e8-gIc" secondAttribute="trailing" constant="21" id="Ix0-Bq-nXB"/>
-                <constraint firstItem="uSi-e8-gIc" firstAttribute="top" secondItem="H9x-eL-AK3" secondAttribute="top" id="qwb-4e-7b2"/>
+                <constraint firstItem="uSi-e8-gIc" firstAttribute="top" secondItem="H9x-eL-AK3" secondAttribute="top" id="7Yi-D4-339"/>
+                <constraint firstItem="uSi-e8-gIc" firstAttribute="leading" secondItem="H9x-eL-AK3" secondAttribute="leading" constant="2" id="gvd-HM-0vg"/>
+                <constraint firstAttribute="trailing" secondItem="uSi-e8-gIc" secondAttribute="trailing" constant="2" id="hQH-mB-YgL"/>
+                <constraint firstAttribute="bottom" secondItem="uSi-e8-gIc" secondAttribute="bottom" id="pBG-5N-8OM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="QCH-jR-BmV"/>
             <size key="customSize" width="134" height="163"/>
             <connections>
-                <outlet property="image" destination="uSi-e8-gIc" id="F0l-Pq-sxT"/>
+                <outlet property="bookImage" destination="uSi-e8-gIc" id="d2N-T3-tdN"/>
             </connections>
             <point key="canvasLocation" x="-293" y="-134"/>
         </collectionViewCell>

@@ -17,14 +17,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xx8-Y9-BU3">
-                    <rect key="frame" x="20" y="600" width="335" height="62"/>
+                    <rect key="frame" x="20" y="480" width="335" height="157"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oks-Qx-HEj">
-                    <rect key="frame" x="20" y="40" width="335" height="540"/>
+                    <rect key="frame" x="20" y="60" width="335" height="370"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-rh-Bst">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="540"/>
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="370"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -39,14 +39,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="oks-Qx-HEj" secondAttribute="bottom" constant="20" id="74G-1X-M1V"/>
+                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="oks-Qx-HEj" secondAttribute="bottom" constant="50" id="74G-1X-M1V"/>
                 <constraint firstItem="oks-Qx-HEj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="9sa-ro-rUf"/>
-                <constraint firstItem="oks-Qx-HEj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Vje-3M-qqN"/>
-                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="600" id="YKw-qY-5J3"/>
+                <constraint firstItem="oks-Qx-HEj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Vje-3M-qqN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xx8-Y9-BU3" secondAttribute="trailing" constant="20" id="iMR-p9-CBs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oks-Qx-HEj" secondAttribute="trailing" constant="20" id="jIn-FR-7ib"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xx8-Y9-BU3" secondAttribute="bottom" constant="5" id="kiW-fZ-M7w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xx8-Y9-BU3" secondAttribute="bottom" constant="30" id="kiW-fZ-M7w"/>
                 <constraint firstItem="Xx8-Y9-BU3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rQU-y8-xFz"/>
+                <constraint firstItem="Xx8-Y9-BU3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="480" id="tdd-EP-trB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -54,6 +54,7 @@
                 <outlet property="booksTable" destination="Z5e-rh-Bst" id="by1-0X-ADS"/>
                 <outlet property="suggestionsContainer" destination="Xx8-Y9-BU3" id="d8M-7v-Zaj"/>
             </connections>
+            <point key="canvasLocation" x="38" y="63"/>
         </view>
     </objects>
 </document>

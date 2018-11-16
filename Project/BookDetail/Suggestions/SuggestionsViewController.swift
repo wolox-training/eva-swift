@@ -30,6 +30,7 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
         
         _view.suggestionsCollection.delegate = self
         _view.suggestionsCollection.dataSource = self
+        _view.suggestionsCollection.register(cell: SuggestionCell.self)
         _viewModel.suggestions.producer.startWithValues { [unowned self] _ in
             self._view.suggestionsCollection.reloadData()
         }
@@ -37,7 +38,6 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
             if(self._rentalsViewModel.getCount() > 0){
                 let book = self._rentalsViewModel.rentals.value.last?.book
                 self._viewModel.loadSuggestions(bookId: book?.id ?? 1)
-                print("reloading")
             }
         }
         
@@ -49,15 +49,27 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
         return _viewModel.getCount()
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = 50
+        let height = 95.0
+        
+        return CGSize(width: CGFloat(width), height: CGFloat(height))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = _view.suggestionsCollection.dequeue(cell: SuggestionCell.self, for: indexPath)!
-        print("imprimiendo imagen")
         let suggestion = _viewModel.getByIndex(index: indexPath.row)
         suggestion.fetchImage(URL(string:suggestion.image)!).producer.startWithResult { (result) in
             switch result {
             case let .success(img):
                 DispatchQueue.main.async { //to execute on main thread
-                    cell.image.image = img
+                    cell.bookImage.image = img
                     //cell.portraitImg.image = img
                     //book.isLoad = true
                     //book.imageLoad = img

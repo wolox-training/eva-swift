@@ -10,5 +10,5 @@ import Foundation
 import WolmoCore
 import UIKit
 class SuggestionCell: UICollectionViewCell, NibLoadable {
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var bookImage: UIImageView!
 }

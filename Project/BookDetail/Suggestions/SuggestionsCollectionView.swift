@@ -12,4 +12,5 @@ import UIKit
 class SuggestionsCollectionView: UIView,NibLoadable {
     
     @IBOutlet weak var suggestionsCollection: UICollectionView!
+    
 }
