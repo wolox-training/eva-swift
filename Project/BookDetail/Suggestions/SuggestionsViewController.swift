@@ -11,9 +11,9 @@ import WolmoCore
 
 class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     private let _viewModel : SuggestionsViewModel = SuggestionsViewModel()
-    
     private let _view: SuggestionsCollectionView = SuggestionsCollectionView.loadFromNib()!
     private let _rentalsViewModel: RentalsViewModel
+    
     init(viewModel: RentalsViewModel) {
         self._rentalsViewModel = viewModel
         super.init(nibName:nil, bundle:nil)
@@ -26,6 +26,7 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
     override func loadView() {
         view = _view
     }
+    
     override func viewDidLoad() {
         
         _view.suggestionsCollection.delegate = self
@@ -81,4 +82,5 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
         }
         return cell
     }
+    
 }

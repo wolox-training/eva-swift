@@ -14,9 +14,10 @@ import Result
 class RentalsViewModel: ImageFetcher {
     private let _rentals = MutableProperty<[
         Rent]>([])
+    private var user:User
+
     public let rentals:Property<[Rent]>
     public let userRepository : UserRepository
-    private var user:User
     
     init(userRepository : UserRepository = NetworkingBootstrapper.shared.createUserRepository(),user:User ) {
         rentals = Property(_rentals)

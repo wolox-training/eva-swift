@@ -50,6 +50,7 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
         _view.booksTable.reloadData()
         print(_viewModel.getCount())
     }
+    
     override func loadView() {
         view = _view
     }
@@ -58,8 +59,6 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-   
     
     //table functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,10 +84,9 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
                     print("Error Finding Image",error)
                 }
             }
-        }else{
+        } else {
             cell.portraitImg.image = book.imageLoad
         }
-        
         cell.backgroundColor = .backgroundColor
         return cell
     }
