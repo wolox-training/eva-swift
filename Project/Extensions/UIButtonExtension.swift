@@ -13,6 +13,9 @@ extension UIButton {
     
     func enable()  {
         self.setGradient(colors: [UIColor(hex:"00ADEE")!, UIColor(hex: "38CCCD")!])
+        self.layer.cornerRadius = 15
+    
+        
     }
     
     func disable() {

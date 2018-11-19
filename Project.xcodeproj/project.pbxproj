@@ -34,13 +34,17 @@
 		4164549C219F000600C423D8 /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549B219F000600C423D8 /* SuggestionsViewModel.swift */; };
 		4164549E219F043800C423D8 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549D219F043800C423D8 /* RentalsViewModel.swift */; };
 		416454A0219F0FC300C423D8 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164549F219F0FC300C423D8 /* Rent.swift */; };
+		416454A521A34E2300C423D8 /* AddBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416454A121A34E2300C423D8 /* AddBookController.swift */; };
+		416454A621A34E2300C423D8 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416454A221A34E2300C423D8 /* AddBookView.swift */; };
+		416454A821A34E2300C423D8 /* AddBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 416454A421A34E2300C423D8 /* AddBookView.xib */; };
+		416454AA21A34EAF00C423D8 /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416454A921A34EAF00C423D8 /* AddBookViewModel.swift */; };
+		416454AC21A3574A00C423D8 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416454AB21A3574A00C423D8 /* CustomTextfield.swift */; };
 		418A77F72194E1F2009C27BB /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F62194E1F2009C27BB /* CommentViewController.swift */; };
 		418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77F92195E685009C27BB /* ImageFetcher.swift */; };
 		418A77FC219B59A7009C27BB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FB219B59A7009C27BB /* Comment.swift */; };
 		418A77FF219B60E0009C27BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A77FE219B60E0009C27BB /* User.swift */; };
 		418A7801219B67C5009C27BB /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A7800219B67C5009C27BB /* CommentViewModel.swift */; };
 		418A7803219B6CC4009C27BB /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A7802219B6CC4009C27BB /* CommentListViewModel.swift */; };
-		41CC93022192524A0093ADB2 /* InputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CC93012192524A0093ADB2 /* InputTextView.xib */; };
 		41CC9305219387890093ADB2 /* NetworkingBootstraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */; };
 		41CC9307219388110093ADB2 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC9306219388110093ADB2 /* AuthUser.swift */; };
 		41CC930921938DC10093ADB2 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC930821938DC10093ADB2 /* BookViewModel.swift */; };
@@ -134,13 +138,17 @@
 		4164549B219F000600C423D8 /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
 		4164549D219F043800C423D8 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
 		4164549F219F0FC300C423D8 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
+		416454A121A34E2300C423D8 /* AddBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookController.swift; sourceTree = "<group>"; };
+		416454A221A34E2300C423D8 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		416454A421A34E2300C423D8 /* AddBookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBookView.xib; sourceTree = "<group>"; };
+		416454A921A34EAF00C423D8 /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
+		416454AB21A3574A00C423D8 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		418A77F62194E1F2009C27BB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		418A77F92195E685009C27BB /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = ../../../../../Downloads/ImageFetcher.swift; sourceTree = "<group>"; };
 		418A77FB219B59A7009C27BB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		418A77FE219B60E0009C27BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		418A7800219B67C5009C27BB /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		418A7802219B6CC4009C27BB /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
-		41CC93012192524A0093ADB2 /* InputTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTextView.xib; sourceTree = "<group>"; };
 		41CC9304219387890093ADB2 /* NetworkingBootstraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootstraper.swift; sourceTree = "<group>"; };
 		41CC9306219388110093ADB2 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		41CC930821938DC10093ADB2 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
@@ -326,17 +334,10 @@
 			path = SuggestionCell;
 			sourceTree = "<group>";
 		};
-		418A77F82195E64B009C27BB /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		41CC9300219252360093ADB2 /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				41CC93012192524A0093ADB2 /* InputTextView.xib */,
+				416454AB21A3574A00C423D8 /* CustomTextfield.swift */,
 			);
 			path = Ui;
 			sourceTree = "<group>";
@@ -387,6 +388,10 @@
 			isa = PBXGroup;
 			children = (
 				41D51658218762E10010B3C2 /* AddBookViewController.swift */,
+				416454A121A34E2300C423D8 /* AddBookController.swift */,
+				416454A221A34E2300C423D8 /* AddBookView.swift */,
+				416454A421A34E2300C423D8 /* AddBookView.xib */,
+				416454A921A34EAF00C423D8 /* AddBookViewModel.swift */,
 			);
 			path = AddBook;
 			sourceTree = "<group>";
@@ -434,7 +439,6 @@
 		9D1575031CB1B27500EA395E /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				418A77F82195E64B009C27BB /* New Group */,
 				41CC9303219387640093ADB2 /* Bootstrapers */,
 				41CC9300219252360093ADB2 /* Ui */,
 				4105D07E2191F56C008710FD /* Repositories */,
@@ -626,7 +630,6 @@
 			files = (
 				4164548B219DFF5E00C423D8 /* RentalsView.xib in Resources */,
 				41645496219E052C00C423D8 /* SuggestionCell.xib in Resources */,
-				41CC93022192524A0093ADB2 /* InputTextView.xib in Resources */,
 				41CC93112194CF600093ADB2 /* BookDetailsView.xib in Resources */,
 				4105D0772191EB5C008710FD /* DetailsView.xib in Resources */,
 				41645491219E041C00C423D8 /* SuggestionsCollectionView.xib in Resources */,
@@ -637,6 +640,7 @@
 				410C80D8218A0903009BD6BB /* BooksCellView.xib in Resources */,
 				4105D0862191F819008710FD /* CommentListView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
+				416454A821A34E2300C423D8 /* AddBookView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,9 +715,12 @@
 				4105D0822191F7C5008710FD /* CommentView.swift in Sources */,
 				4164549C219F000600C423D8 /* SuggestionsViewModel.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				416454AC21A3574A00C423D8 /* CustomTextfield.swift in Sources */,
 				41645494219E04F700C423D8 /* SuggestionCell.swift in Sources */,
 				41D51659218762E10010B3C2 /* AddBookViewController.swift in Sources */,
 				418A77FF219B60E0009C27BB /* User.swift in Sources */,
+				416454A621A34E2300C423D8 /* AddBookView.swift in Sources */,
+				416454A521A34E2300C423D8 /* AddBookController.swift in Sources */,
 				41CC9307219388110093ADB2 /* AuthUser.swift in Sources */,
 				41D5164821875C380010B3C2 /* LibraryViewController.swift in Sources */,
 				41D5164C21875C750010B3C2 /* BaseModel.swift in Sources */,
@@ -721,6 +728,7 @@
 				41D5164A21875C5A0010B3C2 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				41D5165121875CFB0010B3C2 /* WishListViewController.swift in Sources */,
+				416454AA21A34EAF00C423D8 /* AddBookViewModel.swift in Sources */,
 				418A77FA2195E685009C27BB /* ImageFetcher.swift in Sources */,
 				4164549A219E073100C423D8 /* UserRepository.swift in Sources */,
 				41CC930F2194C35E0093ADB2 /* DetailsViewController.swift in Sources */,

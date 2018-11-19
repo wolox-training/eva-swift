@@ -29,14 +29,14 @@ final class ViewController:  UITabBarController, UITabBarControllerDelegate,UINa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //setup of all controllers'
-         let userRepository : UserRepository = NetworkingBootstrapper.shared.createUserRepository()
+        let userRepository : UserRepository = NetworkingBootstrapper.shared.createUserRepository()
         userRepository.fetchUser().startWithResult { result in
             switch result {
             case .success(let userResponse) :
                 self.viewControllers = [
                     LibraryViewController(),
                     WishListViewController(),
-                    AddBookViewController(),
+                    AddBookController(viewModel: AddBookViewModel()),
                     RentalsViewController(user: userResponse),
                     SettingsViewController()]
             case .failure(let error) :

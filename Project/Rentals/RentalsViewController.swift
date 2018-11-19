@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let _suggestionsController :SuggestionsViewController
     private let _viewModel : RentalsViewModel
     private let user : User
@@ -68,7 +68,6 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
         let book = BookViewModel(book: _viewModel.getByIndex(index: indexPath.row).book)
-        print(book.title)
         cell.titleLabel.text = book.title
         cell.authorLabel.text = book.author
         if(!book.isLoad){// prevent re fetching the book image
