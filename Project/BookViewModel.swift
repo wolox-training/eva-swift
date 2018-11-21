@@ -8,16 +8,25 @@
 
 import Foundation
 import WolmoCore
+import UIKit
+import ReactiveSwift
+import Result
+import Networking
+
 
 class BookViewModel : ImageFetcher {
     private let book : Book
     public var isLoad :Bool = false
-    public var imageLoad : UIImage = UIImage()
+    public var imageLoad : UIImage? = UIImage()
     public var status : String = Book.unavailable
     public var statusColor : UIColor = UIColor.red
-
+    
     init(book : Book) {
         self.book = book
+    }
+    
+    var img : UIImage {
+        return self.imageLoad ?? UIImage()
     }
     
     var id: Int {
