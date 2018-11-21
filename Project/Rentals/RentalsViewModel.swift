@@ -15,7 +15,6 @@ class RentalsViewModel: ImageFetcher {
     private let _rentals = MutableProperty<[
         Rent]>([])
     private var user:User
-
     public let rentals:Property<[Rent]>
     public let userRepository : UserRepository
     
@@ -32,11 +31,31 @@ class RentalsViewModel: ImageFetcher {
                 switch result {
                 case .success(let rentals) :
                     self._rentals.value = rentals.filter({$0.returnedAt == nil })
+                    DispatchQueue.main.async {
+                        self.fetchBookImages()
+                    }
                 case .failure(let error) :
                     print(error)
                 }
         }
-        
+    }
+    
+    func fetchBookImages() {
+        _rentals.value.forEach({rent  in
+            let book = BookViewModel(book: rent.book)
+            book.fetchImage(URL(string:book.image)!).producer.startWithResult { (result) in
+                print("fetching")
+                switch result {
+                case let .success(img):
+                    book.isLoad = true
+                    DispatchQueue.main.async {
+                        book.imageLoad = img
+                    }
+                case let .failure(error):
+                    print("Error Finding Image",error)
+                }
+            }
+        })
     }
     
     func getByIndex(index:Int) -> Rent {
@@ -46,8 +65,4 @@ class RentalsViewModel: ImageFetcher {
     func getCount() -> Int {
         return rentals.value.count
     }
-    
-    
-    
-    
 }

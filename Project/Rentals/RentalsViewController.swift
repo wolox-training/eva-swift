@@ -18,7 +18,7 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     init(user:User) {
         self.user = user
         _viewModel = RentalsViewModel(user: user)
-        self._suggestionsController =
+        _suggestionsController =
             SuggestionsViewController(viewModel :_viewModel)
         super.init(nibName:nil, bundle:nil)
         //tabbar name and style setup
@@ -48,7 +48,6 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         _view.booksTable.reloadData()
-        print(_viewModel.getCount())
     }
     
     override func loadView() {
@@ -66,27 +65,12 @@ class RentalsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
+        let cell = tableView.dequeue(cell: BooksCellView.self, for: indexPath)!
         let book = BookViewModel(book: _viewModel.getByIndex(index: indexPath.row).book)
         print(book.title)
         cell.titleLabel.text = book.title
         cell.authorLabel.text = book.author
-        if(!book.isLoad){// prevent re fetching the book image
-            book.fetchImage(URL(string:book.image)!).producer.startWithResult { (result) in
-                switch result {
-                case let .success(img):
-                    DispatchQueue.main.async { //to execute on main thread
-                        cell.portraitImg.image = img
-                        book.isLoad = true
-                        book.imageLoad = img
-                    }
-                case let .failure(error):
-                    print("Error Finding Image",error)
-                }
-            }
-        } else {
-            cell.portraitImg.image = book.imageLoad
-        }
+        cell.portraitImg.load(url: book.image, fetcher: book)
         cell.backgroundColor = .backgroundColor
         return cell
     }

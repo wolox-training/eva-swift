@@ -8,7 +8,7 @@
 
 import Foundation
 import WolmoCore
-
+import UIKit
 class CommentViewModel: ImageFetcher {
     private let comment : Comment
     public var isLoad :Bool = false
@@ -17,7 +17,6 @@ class CommentViewModel: ImageFetcher {
     init(comment :Comment) {
         self.comment = comment
     }
-    
     var id: Int{
         return comment.id
     }

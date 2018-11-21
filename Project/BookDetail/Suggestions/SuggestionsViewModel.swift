@@ -23,20 +23,33 @@ class SuggestionsViewModel: ImageFetcher {
     
     public func loadSuggestions(bookId:Int){
         booksRepository.fetchSuggestions(bookId: bookId)
-            .map {
-                $0.map {
-                    BookViewModel(book: $0)
-                }
-            }
+            .map {$0.map {BookViewModel(book: $0)}}
             .startWithResult {
                 [unowned self] result in
                 switch result {
                 case .success(let bookViewModels) :
                     self._suggestions.value = bookViewModels
+                    //self.fetchBookImages()
                 case .failure(let error) :
                     print(error)
                 }
         }
+    }
+    
+    public func fetchBookImages() {
+        //print("images")
+        _suggestions.value.forEach({book in book.fetchImage(URL(string:book.image)!).producer.startWithResult { (result) in
+            switch result {
+            case let .success(img):
+                DispatchQueue.main.async { //to execute on main thread
+                    book.imageLoad = img
+                }
+                print("the image")
+            case let .failure(error):
+                print("Error Finding Image",error)
+            }
+            
+            }})
     }
     
     func getByIndex(index:Int) -> BookViewModel {
@@ -46,8 +59,4 @@ class SuggestionsViewModel: ImageFetcher {
     func getCount() -> Int {
         return suggestions.value.count
     }
-    
-    
-    
-    
 }

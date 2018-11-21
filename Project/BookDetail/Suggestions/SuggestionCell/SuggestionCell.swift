@@ -6,9 +6,11 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import Foundation
-import WolmoCore
 import UIKit
+import WolmoCore
+import ReactiveSwift
+import Result
+
 class SuggestionCell: UICollectionViewCell, NibLoadable {
     @IBOutlet weak var bookImage: UIImageView!
 }

@@ -5,9 +5,11 @@
 //  Created by Emmanuel Velez Agudelo on 11/15/18.
 //  Copyright © 2018 Wolox. All rights reserved.
 //
-
-import Foundation
+import UIKit
 import WolmoCore
+import ReactiveSwift
+import Result
+
 
 class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     private let _viewModel : SuggestionsViewModel = SuggestionsViewModel()
@@ -28,7 +30,6 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
     }
     
     override func viewDidLoad() {
-        
         _view.suggestionsCollection.delegate = self
         _view.suggestionsCollection.dataSource = self
         _view.suggestionsCollection.register(cell: SuggestionCell.self)
@@ -41,10 +42,10 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
                 self._viewModel.loadSuggestions(bookId: book?.id ?? 1)
             }
         }
-        
         _view.backgroundColor = .backgroundColor
         _view.suggestionsCollection.backgroundColor = .backgroundColor
     }
+    
     //Collection view handlers
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _viewModel.getCount()
@@ -53,7 +54,6 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = 50
         let height = 95.0
-        
         return CGSize(width: CGFloat(width), height: CGFloat(height))
     }
     
@@ -64,23 +64,10 @@ class SuggestionsViewController : UIViewController,UICollectionViewDelegate,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = _view.suggestionsCollection.dequeue(cell: SuggestionCell.self, for: indexPath)!
+        let cell = _view.suggestionsCollection.dequeue(cell: SuggestionCell.self, for: indexPath)!
         let suggestion = _viewModel.getByIndex(index: indexPath.row)
-        suggestion.fetchImage(URL(string:suggestion.image)!).producer.startWithResult { (result) in
-            switch result {
-            case let .success(img):
-                DispatchQueue.main.async { //to execute on main thread
-                    cell.bookImage.image = img
-                    //cell.portraitImg.image = img
-                    //book.isLoad = true
-                    //book.imageLoad = img
-                }
-            case let .failure(error):
-                print("Error Finding Image",error)
-            }
-            
-        }
-        return cell
+            cell.bookImage.load(url: suggestion.image, fetcher: suggestion)
+            return cell
     }
     
 }

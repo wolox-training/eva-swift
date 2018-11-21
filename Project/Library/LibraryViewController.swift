@@ -59,7 +59,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // table delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return _viewModel.getCount()
+        return _viewModel.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,23 +68,7 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.titleLabel.text = book.title
         cell.authorLabel.text = book.author
-        if(!book.isLoad){// prevent re fetching the book image
-            book.fetchImage(URL(string:book.image)!).producer.startWithResult { (result) in
-                switch result {
-                case let .success(img):
-                    DispatchQueue.main.async { //to execute on main thread
-                        cell.portraitImg.image = img
-                        book.isLoad = true
-                        book.imageLoad = img
-                    }
-                case let .failure(error):
-                    print("Error Finding Image",error)
-                }
-            }
-        }else{
-            cell.portraitImg.image = book.imageLoad
-        }
-        
+        cell.portraitImg.load(url: book.image, fetcher: book)
         cell.backgroundColor = .backgroundColor
         return cell
     }
@@ -94,17 +78,17 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let book = _viewModel.getBookByIndex(index: indexPath.row)
         _viewModel.loadStatus(bookId: book.id).producer.startWithResult { (result) in
             switch result {
-                case .success(let response) :
-                    if(response){
-                        book.status = Book.available
-                        book.statusColor = UIColor.green
-                    }
-                    self.openBookDetail(bookViewModel: book)
-                case .failure(let error) :
-                    print(error)
+            case .success(let response) :
+                if(response){
+                    book.status = Book.available
+                    book.statusColor = UIColor.green
                 }
+                self.openBookDetail(bookViewModel: book)
+            case .failure(let error) :
+                print(error)
             }
         }
+    }
     
     
     //Pagination
@@ -113,5 +97,5 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             _viewModel.loadBooks()
         }
     }
-   
+    
 }
