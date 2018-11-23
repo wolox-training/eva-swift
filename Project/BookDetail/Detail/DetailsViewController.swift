@@ -9,13 +9,16 @@
 import Foundation
 import UIKit
 import WolmoCore
-
+import ReactiveSwift
+import ReactiveCocoa
 class DetailsViewController: UIViewController {
     private var _view: DetailsView = DetailsView.loadFromNib()!
     private var _viewModel : BookViewModel
+    private var _detailsViewModel : DetailsViewModel
     
     init(_ viewModel : BookViewModel) {
         _viewModel = viewModel
+        _detailsViewModel = DetailsViewModel()
         super.init(nibName:nil, bundle:nil)
     }
 
@@ -26,9 +29,20 @@ class DetailsViewController: UIViewController {
     override func loadView() {
         view = _view
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //subscribe to a ui component with async action
+        _view.rent.reactive.pressed = CocoaAction(_detailsViewModel.action)
+        _detailsViewModel.action.values.observeValues { value  in
+            
+        }
+        
+        //subscribe to a button event
+        _view.rent.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
+            //self.navigationController?.popViewController(animated: true)
+        }
+        
         _view.title.text = _viewModel.title
         _view.author.text = _viewModel.author
         _view.portrait.image = _viewModel.imageLoad

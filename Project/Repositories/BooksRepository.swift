@@ -62,13 +62,13 @@ class BooksRepository: AbstractRepository, BooksRepositoryType {
             decode($0).toResult()
         }
     }
+    
     func saveBook(book:Book) ->  SignalProducer<[Book],  RepositoryError> {
         let path = BooksRepository.fetchPath
         //serialize the book
-        return performRequest(method: .post, path:path) {
+        return performRequest(method: .post, path:path,parameters: book.toDictionary()) {
             decode($0).toResult()
         }
-        
     }
     
 }

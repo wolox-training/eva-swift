@@ -91,6 +91,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="bookImage" destination="L6Q-fa-hVS" id="w32-Hf-2bq"/>
                 <outlet property="submitButton" destination="lyh-um-QFi" id="GwN-sh-pSC"/>
             </connections>
             <point key="canvasLocation" x="52.5" y="48.591549295774648"/>

@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 import WolmoCore
+import ReactiveCocoa
+import ReactiveSwift
 
 final class AddBookView: UIView, NibLoadable {
     
+    @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var submitButton: UIButton!{
         didSet{
             submitButton.enable()
