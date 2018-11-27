@@ -27,34 +27,34 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-l4-VvR">
-                            <rect key="frame" x="20" y="185" width="260" height="218"/>
+                            <rect key="frame" x="20" y="210" width="260" height="153"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eyk-x0-STL">
-                                    <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Book's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eyk-x0-STL">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-oz-k2g">
-                                    <rect key="frame" x="0.0" y="47" width="260" height="30"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-oz-k2g">
+                                    <rect key="frame" x="0.0" y="34" width="260" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUR-qy-EpQ">
-                                    <rect key="frame" x="0.0" y="94" width="260" height="30"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUR-qy-EpQ">
+                                    <rect key="frame" x="0.0" y="68" width="260" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-t9-eyc">
-                                    <rect key="frame" x="0.0" y="141" width="260" height="30"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-t9-eyc">
+                                    <rect key="frame" x="0.0" y="102" width="260" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-0w-Pgg">
-                                    <rect key="frame" x="0.0" y="188" width="260" height="30"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-0w-Pgg">
+                                    <rect key="frame" x="0.0" y="136" width="260" height="17"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -72,7 +72,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="L6Q-fa-hVS" firstAttribute="top" secondItem="43p-cS-Ave" secondAttribute="top" constant="19" id="2uk-1U-RL5"/>
-                        <constraint firstItem="lyh-um-QFi" firstAttribute="top" secondItem="MCH-l4-VvR" secondAttribute="bottom" constant="15" id="7oY-pq-2vF"/>
+                        <constraint firstItem="lyh-um-QFi" firstAttribute="top" secondItem="MCH-l4-VvR" secondAttribute="bottom" constant="55" id="7oY-pq-2vF"/>
                         <constraint firstItem="lyh-um-QFi" firstAttribute="leading" secondItem="43p-cS-Ave" secondAttribute="leading" constant="20" id="9MP-Mv-Tb3"/>
                         <constraint firstAttribute="trailing" secondItem="MCH-l4-VvR" secondAttribute="trailing" constant="20" id="XAx-fc-BcJ"/>
                         <constraint firstAttribute="bottom" secondItem="lyh-um-QFi" secondAttribute="bottom" constant="30" id="cOF-Zk-z8I"/>
@@ -91,8 +91,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="authorTextField" destination="ldu-oz-k2g" id="Y4V-Rt-WTI"/>
                 <outlet property="bookImage" destination="L6Q-fa-hVS" id="w32-Hf-2bq"/>
+                <outlet property="bookNameTextField" destination="Eyk-x0-STL" id="gqc-RC-xk7"/>
+                <outlet property="descriptionTextField" destination="ISv-0w-Pgg" id="NIM-53-WfZ"/>
                 <outlet property="submitButton" destination="lyh-um-QFi" id="GwN-sh-pSC"/>
+                <outlet property="topicTextField" destination="Jgv-t9-eyc" id="XxW-jl-UMB"/>
+                <outlet property="yearTextField" destination="nUR-qy-EpQ" id="3rO-81-ZcL"/>
             </connections>
             <point key="canvasLocation" x="52.5" y="48.591549295774648"/>
         </view>

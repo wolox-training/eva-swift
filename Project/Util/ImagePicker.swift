@@ -143,17 +143,15 @@ public final class MediaPickerService: NSObject, MediaPickerServiceType {
 extension MediaPickerService: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        _viewController?.dismiss(animated: true) { [unowned self] in
-            let type = info[UIImagePickerControllerMediaType] as! CFString //swiftlint:disable:this force_cast
-            
-            if UTTypeConformsTo(type, MediaPickerMediaType.image.mediaTypeString) {
-                self._mediaObserver.send(value: .image(self.getImage(from: info)!))
-            } else if UTTypeConformsTo(type, MediaPickerMediaType.video.mediaTypeString) {
-                self._mediaObserver.send(value: .video(info[UIImagePickerControllerMediaURL] as! URL)) //swiftlint:disable:this force_cast
-            } else {
-                self._mediaObserver.send(value: .other(info))
-            }
+        let type = info[UIImagePickerControllerMediaType] as! CFString //swiftlint:disable:this force_cast
+        if UTTypeConformsTo(type, MediaPickerMediaType.image.mediaTypeString) {
+            self._mediaObserver.send(value: .image(self.getImage(from: info)!))
+        } else if UTTypeConformsTo(type, MediaPickerMediaType.video.mediaTypeString) {
+            self._mediaObserver.send(value: .video(info[UIImagePickerControllerMediaURL] as! URL)) //swiftlint:disable:this force_cast
+        } else {
+            self._mediaObserver.send(value: .other(info))
         }
+        _viewController?.dismiss(animated: true)
     }
     
     private func getImage(from info: [String : Any]) -> UIImage? {

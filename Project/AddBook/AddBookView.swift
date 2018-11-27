@@ -20,11 +20,44 @@ final class AddBookView: UIView, NibLoadable {
             submitButton.enable()
         }
     }
-    @IBOutlet weak var bookName: CustomTextfield!
+    @IBOutlet weak var authorTextField: UITextField!{
+        didSet{
+            authorTextField.setInlineStyle()
+        }
+    }
+    @IBOutlet weak var yearTextField: UITextField!{
+        didSet{
+            yearTextField.setInlineStyle()
+        }
+    }
+    @IBOutlet weak var topicTextField: UITextField!{
+        didSet{
+            topicTextField.setInlineStyle()
+        }
+    }
+    @IBOutlet weak var descriptionTextField: UITextField!{
+        didSet{
+            descriptionTextField.setInlineStyle()
+        }
+    }
+    @IBOutlet weak var bookNameTextField: UITextField!{
+        didSet{
+            bookNameTextField.setInlineStyle()
+        }
+    }
+    @IBOutlet weak var bookTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .backgroundColor
         setUpViews()
+    }
+    
+    func clearTextfields() {
+        bookNameTextField.text = ""
+        authorTextField.text = ""
+        yearTextField.text = ""
+        topicTextField.text = ""
+        descriptionTextField.text = ""
     }
     
 }

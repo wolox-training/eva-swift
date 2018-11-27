@@ -25,9 +25,11 @@ protocol BooksRepositoryType {
 }
 
 class BooksRepository: AbstractRepository, BooksRepositoryType {
+    
     static let fetchPath = "books"
     static let pageSize = 10
     static let pageKey = "page"
+    
     func fetchBooks(page: Int) -> SignalProducer<[Book],  RepositoryError> {
         let path = BooksRepository.fetchPath
         let parameters = [BooksRepository.pageKey: page, "amount": BooksRepository.pageSize]
@@ -63,10 +65,10 @@ class BooksRepository: AbstractRepository, BooksRepositoryType {
         }
     }
     
-    func saveBook(book:Book) ->  SignalProducer<[Book],  RepositoryError> {
-        let path = BooksRepository.fetchPath
+    func saveBook(book:[String:Any]) ->  SignalProducer<[Book],  RepositoryError> {
+        let path = "book_suggestions"
         //serialize the book
-        return performRequest(method: .post, path:path,parameters: book.toDictionary()) {
+        return performRequest(method: .post, path:path,parameters:book ) {
             decode($0).toResult()
         }
     }

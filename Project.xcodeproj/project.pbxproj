@@ -25,6 +25,7 @@
 		412CEF5221A70015001DFB4D /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CEF5121A70015001DFB4D /* DetailsViewModel.swift */; };
 		412CEF5421A74D68001DFB4D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CEF5321A74D68001DFB4D /* ImagePicker.swift */; };
 		412CEF5621A74E06001DFB4D /* UIImagePickerControllerSourceTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412CEF5521A74E06001DFB4D /* UIImagePickerControllerSourceTypeExtension.swift */; };
+		4154269021A89D5C009D5B94 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4154268F21A89D5C009D5B94 /* UITextFieldExtension.swift */; };
 		41645480219DC64800C423D8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164547F219DC64800C423D8 /* UIButtonExtension.swift */; };
 		4164548B219DFF5E00C423D8 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4164548A219DFF5E00C423D8 /* RentalsView.xib */; };
 		4164548D219DFF6E00C423D8 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164548C219DFF6E00C423D8 /* RentalsView.swift */; };
@@ -131,6 +132,7 @@
 		412CEF5121A70015001DFB4D /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		412CEF5321A74D68001DFB4D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		412CEF5521A74E06001DFB4D /* UIImagePickerControllerSourceTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerSourceTypeExtension.swift; sourceTree = "<group>"; };
+		4154268F21A89D5C009D5B94 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		4164547F219DC64800C423D8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		4164548A219DFF5E00C423D8 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
 		4164548C219DFF6E00C423D8 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				410C80E5218CAB14009BD6BB /* UiColorExtension.swift */,
 				4164547F219DC64800C423D8 /* UIButtonExtension.swift */,
 				412CEF5521A74E06001DFB4D /* UIImagePickerControllerSourceTypeExtension.swift */,
+				4154268F21A89D5C009D5B94 /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,8 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				416454A121A34E2300C423D8 /* AddBookController.swift */,
-				416454A221A34E2300C423D8 /* AddBookView.swift */,
 				416454A421A34E2300C423D8 /* AddBookView.xib */,
+				416454A221A34E2300C423D8 /* AddBookView.swift */,
 				416454A921A34EAF00C423D8 /* AddBookViewModel.swift */,
 			);
 			path = AddBook;
@@ -722,6 +725,7 @@
 				4164549C219F000600C423D8 /* SuggestionsViewModel.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				412CEF5621A74E06001DFB4D /* UIImagePickerControllerSourceTypeExtension.swift in Sources */,
+				4154269021A89D5C009D5B94 /* UITextFieldExtension.swift in Sources */,
 				416454AC21A3574A00C423D8 /* CustomTextfield.swift in Sources */,
 				41645494219E04F700C423D8 /* SuggestionCell.swift in Sources */,
 				418A77FF219B60E0009C27BB /* User.swift in Sources */,
