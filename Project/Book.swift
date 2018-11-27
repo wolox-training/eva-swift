@@ -21,7 +21,7 @@ struct Book {
     var genre: String
     static public let available = "Available"
     static public let unavailable = "Unavailable"
-
+    
     
     init(id: Int, title: String, author: String, imageURL: String?, year: String, genre: String) {
         self.id = id
@@ -31,6 +31,9 @@ struct Book {
         self.image = imageURL ?? "http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg"
         self.year = year
         self.genre = genre
+    }
+    func toDictionary() -> [String : Any] {
+        return ["id":id,"title":title, "author":author, year:"year",genre:"genre"]
     }
     
 }

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddBookView" customModule="Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43p-cS-Ave">
+                    <rect key="frame" x="10" y="80" width="300" height="478"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add photo" translatesAutoresizingMaskIntoConstraints="NO" id="L6Q-fa-hVS">
+                            <rect key="frame" x="20" y="19" width="140" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="Cmc-om-6su"/>
+                                <constraint firstAttribute="height" constant="150" id="Q85-cb-IKz"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-l4-VvR">
+                            <rect key="frame" x="20" y="210" width="260" height="153"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Book's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eyk-x0-STL">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-oz-k2g">
+                                    <rect key="frame" x="0.0" y="34" width="260" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUR-qy-EpQ">
+                                    <rect key="frame" x="0.0" y="68" width="260" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-t9-eyc">
+                                    <rect key="frame" x="0.0" y="102" width="260" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-0w-Pgg">
+                                    <rect key="frame" x="0.0" y="136" width="260" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyh-um-QFi">
+                            <rect key="frame" x="20" y="418" width="260" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="L6Q-fa-hVS" firstAttribute="top" secondItem="43p-cS-Ave" secondAttribute="top" constant="19" id="2uk-1U-RL5"/>
+                        <constraint firstItem="lyh-um-QFi" firstAttribute="top" secondItem="MCH-l4-VvR" secondAttribute="bottom" constant="55" id="7oY-pq-2vF"/>
+                        <constraint firstItem="lyh-um-QFi" firstAttribute="leading" secondItem="43p-cS-Ave" secondAttribute="leading" constant="20" id="9MP-Mv-Tb3"/>
+                        <constraint firstAttribute="trailing" secondItem="MCH-l4-VvR" secondAttribute="trailing" constant="20" id="XAx-fc-BcJ"/>
+                        <constraint firstAttribute="bottom" secondItem="lyh-um-QFi" secondAttribute="bottom" constant="30" id="cOF-Zk-z8I"/>
+                        <constraint firstItem="MCH-l4-VvR" firstAttribute="leading" secondItem="43p-cS-Ave" secondAttribute="leading" constant="20" id="sC9-xd-4SZ"/>
+                        <constraint firstItem="L6Q-fa-hVS" firstAttribute="leading" secondItem="43p-cS-Ave" secondAttribute="leading" constant="20" id="xMh-i0-A1x"/>
+                        <constraint firstAttribute="trailing" secondItem="lyh-um-QFi" secondAttribute="trailing" constant="20" id="xrE-dH-CQh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="43p-cS-Ave" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="NZR-NL-atx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="43p-cS-Ave" secondAttribute="trailing" constant="10" id="RvO-SK-Vbp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="43p-cS-Ave" secondAttribute="bottom" constant="10" id="bzV-z7-Hw3"/>
+                <constraint firstItem="43p-cS-Ave" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="lQD-Lg-aaR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="authorTextField" destination="ldu-oz-k2g" id="Y4V-Rt-WTI"/>
+                <outlet property="bookImage" destination="L6Q-fa-hVS" id="w32-Hf-2bq"/>
+                <outlet property="bookNameTextField" destination="Eyk-x0-STL" id="gqc-RC-xk7"/>
+                <outlet property="descriptionTextField" destination="ISv-0w-Pgg" id="NIM-53-WfZ"/>
+                <outlet property="submitButton" destination="lyh-um-QFi" id="GwN-sh-pSC"/>
+                <outlet property="topicTextField" destination="Jgv-t9-eyc" id="XxW-jl-UMB"/>
+                <outlet property="yearTextField" destination="nUR-qy-EpQ" id="3rO-81-ZcL"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="48.591549295774648"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_add photo" width="96" height="96"/>
+    </resources>
+</document>

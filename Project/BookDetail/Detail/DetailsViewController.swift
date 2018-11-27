@@ -9,13 +9,16 @@
 import Foundation
 import UIKit
 import WolmoCore
-
+import ReactiveSwift
+import ReactiveCocoa
 class DetailsViewController: UIViewController {
     private var _view: DetailsView = DetailsView.loadFromNib()!
     private var _viewModel : BookViewModel
+    private var _detailsViewModel : DetailsViewModel
     
     init(_ viewModel : BookViewModel) {
         _viewModel = viewModel
+        _detailsViewModel = DetailsViewModel()
         super.init(nibName:nil, bundle:nil)
     }
 
@@ -26,7 +29,7 @@ class DetailsViewController: UIViewController {
     override func loadView() {
         view = _view
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _view.title.text = _viewModel.title

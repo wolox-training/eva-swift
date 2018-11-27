@@ -20,34 +20,16 @@ struct Status {
 
 }
 
-struct Rent {
-    public var id: Int
-    public var from: String
-    public var to: String
-    public var returnedAt: String?
-    
-}
-
-extension Rent: Argo.Decodable {
-    public static func decode(_ json: JSON) -> Decoded<Rent> {
-        return curry(Rent.init)
-            <^> json <| "id"
-            <*> json <| "from"
-            <*> json <| "to"
-            <*> json <|? "returned_at"
-
-    }
-}
-
-
 protocol BooksRepositoryType {
     func fetchBooks(page:Int) -> SignalProducer<[Book],RepositoryError>
 }
 
 class BooksRepository: AbstractRepository, BooksRepositoryType {
+    
     static let fetchPath = "books"
     static let pageSize = 10
     static let pageKey = "page"
+    
     func fetchBooks(page: Int) -> SignalProducer<[Book],  RepositoryError> {
         let path = BooksRepository.fetchPath
         let parameters = [BooksRepository.pageKey: page, "amount": BooksRepository.pageSize]
@@ -75,4 +57,20 @@ class BooksRepository: AbstractRepository, BooksRepositoryType {
         })
         return resultRents
     }
+    
+    func fetchSuggestions(bookId : Int) -> SignalProducer<[Book],  RepositoryError> {
+        let path = BooksRepository.fetchPath+"/"+String(bookId)+"/suggestions"
+        return performRequest(method: .get, path: path) {
+            decode($0).toResult()
+        }
+    }
+    
+    func saveBook(book:[String:Any]) ->  SignalProducer<[Book],  RepositoryError> {
+        let path = "book_suggestions"
+        //serialize the book
+        return performRequest(method: .post, path:path,parameters:book ) {
+            decode($0).toResult()
+        }
+    }
+    
 }
