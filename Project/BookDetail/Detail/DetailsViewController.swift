@@ -32,17 +32,6 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //subscribe to a ui component with async action
-        _view.rent.reactive.pressed = CocoaAction(_detailsViewModel.action)
-        _detailsViewModel.action.values.observeValues { value  in
-            
-        }
-        
-        //subscribe to a button event
-        _view.rent.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
-            //self.navigationController?.popViewController(animated: true)
-        }
-        
         _view.title.text = _viewModel.title
         _view.author.text = _viewModel.author
         _view.portrait.image = _viewModel.imageLoad

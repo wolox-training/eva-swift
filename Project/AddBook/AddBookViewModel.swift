@@ -15,6 +15,12 @@ class AddBookViewModel {
     private var booksRepository:BooksRepository
     public var title = MutableProperty<String>("")
     public var author = MutableProperty<String>("")
+    public var year = MutableProperty<String>("")
+    public var topic = MutableProperty<String>("")
+    public var description = MutableProperty<String>("")
+
+
+    
     init(booksRepository : BooksRepository = NetworkingBootstrapper.shared.createBooksRepository()) {
        
         self.booksRepository = booksRepository
@@ -24,8 +30,8 @@ class AddBookViewModel {
         return self.booksRepository.saveBook(book: book)
     }
     
-    func postSuggestion(book : [String:Any]) -> SignalProducer<[Book],  RepositoryError> {
-        return booksRepository.saveBook(book: book)
+    func postSuggestion() -> SignalProducer<[Book],  RepositoryError> {
+        return booksRepository.saveBook(book: ["title":title.value,"author":author.value,"topic":topic.value,"year":year.value,"description":description.value])
     }
     
 }

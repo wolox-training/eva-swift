@@ -23,7 +23,6 @@ class DetailsView: UIView, NibLoadable {
             rent.layer.cornerRadius = 15
         }
     }
-    
     @IBOutlet weak var addWish: UIButton!{
         didSet{
             addWish.layer.cornerRadius = 15

@@ -35,7 +35,6 @@ final class AddBookController: UIViewController {
         _viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
         self.tabBarItem = UITabBarItem(title: "Add Book", image: UIImage(named: "ic_add new.png"), selectedImage: UIImage(named: "ic_add new.png"))
-        //subscribe to a button event
     }
     
     override public func loadView() {
@@ -77,21 +76,19 @@ final class AddBookController: UIViewController {
             }
         }
     }
-    //
+    
     func validateBookSuggestion() -> Bool {
         if(_viewModel.title.value == "" || _viewModel.author.value == ""){
             return false
         }
         return true 
     }
-    //
+    
     func sendSuggestion(){
-        
-        let book = ["title":_view.authorTextField.text,"author":_view.authorTextField.text]
-        print(_viewModel.title,_viewModel.author,validateBookSuggestion())
         if(validateBookSuggestion()){
-            _viewModel.postSuggestion(book: book)
+            _viewModel.postSuggestion()
             notifySuccess()
+            _view.clearTextfields()
             return
         }
         notifyValidations()
@@ -102,16 +99,16 @@ final class AddBookController: UIViewController {
         
         let alert = UIAlertController(title: "Alert", message: "The post suggestion was sended succesfully",
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Acept", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         return
         
     }
     
     func notifyValidations() {
-        let alert = UIAlertController(title: "Error", message: "all fields must be complete",
+        let alert = UIAlertController(title: "Error", message: "Title and author are mandatory",
                                       preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         return
         
@@ -123,8 +120,10 @@ private extension AddBookController {
     
     private func bindViewModel() {
         _viewModel.title <~ _view.bookNameTextField.reactive.continuousTextValues.skipNil()
-        
         _viewModel.author <~ _view.authorTextField.reactive.continuousTextValues.skipNil()
+        _viewModel.topic <~ _view.topicTextField.reactive.continuousTextValues.skipNil()
+        _viewModel.year <~ _view.yearTextField.reactive.continuousTextValues.skipNil()
+        _viewModel.description <~ _view.descriptionTextField.reactive.continuousTextValues.skipNil()
     }
     
 }
